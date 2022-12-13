@@ -1,11 +1,13 @@
 <template>
     <div id="login">
-    <form @submit.prevent="login">
-    <input type="text" v-model="username" placeholder="Username">
+    <form @submit.prevent="signUp">
+    <input type="text" v-model="email" placeholder="Email">
     <input type="text" v-model="password" placeholder="Password">
-    <button type="submit">Login!</button>    
+    <button type="submit">Sign Up!</button>    
     </form>
 </div>
+
+
 
     <header>
     <h1>Our tasks</h1>
@@ -23,12 +25,12 @@
         <button>Add</button>
       </form>
       <ul >
-        <todo-item id="ul1"
+        <TodoItem id="listado-tareas"
           v-for="(todo, index) in todos"
           :key="todo.id"
           :title="todo.title"
           @remove="todos.splice(index, 1)">
-    </todo-item>
+    </TodoItem>
       </ul>
     </section>
     <section id="sec2">
@@ -44,10 +46,15 @@
 <script>
 
 import TodoItem from '../components/TodoItem.vue'
+import { mapStores } from 'pinia'
+import userStore from '../stores/user'
+
   export default {
     components: { TodoItem },
     data() {
       return {
+        password: "", 
+        email: "",
         newTodoText: '',
         todos: [
           {
@@ -74,8 +81,13 @@ import TodoItem from '../components/TodoItem.vue'
         })
         this.newTodoText = ''
       },
+      signUp () {
+        this.userStore.signUp(this.email, this.password)
+
+      }
     },
     computed: {
+        ...mapStores (userStore),
       columnHeightFactor() {
       return this.todos.length*21;
     },
@@ -92,7 +104,7 @@ import TodoItem from '../components/TodoItem.vue'
     border-radius: 5px;
 }
 
-#ul1 {
+#listado-tareas {
     background-color: rgb(87, 195, 195);
     margin: 4px;
     border-radius: 7px;
