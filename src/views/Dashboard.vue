@@ -135,7 +135,7 @@ h2 {
   text-align: center;
 }
 #sec1 {
-  background-color: rgb(225, 149, 162);
+  background-color: rgb(207, 43, 70);
   border-style: double;
   width: 300px;
   /*height: 600px;*/
@@ -145,15 +145,19 @@ border-radius: 20px;
 #sec2 {
   border-style: double;
   /*background-color:red;*/
+  background-color: rgb(240, 240, 131);
   width: 300px;
   height: 170px;
   margin: 10px;
+  border-radius: 15px;
 }
 #sec3 {
   border-style: double;
   /*background-color: green;*/
+  background-color: rgb(122, 223, 122);
   width: 300px;
   height: 170px;
   margin: 10px;
+  border-radius: 15px;
 }
 </style>
