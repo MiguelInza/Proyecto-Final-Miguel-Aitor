@@ -4,6 +4,8 @@ import { defineStore } from "pinia";
 
 import { supabase } from "../supabase";
 
+
+
 export default defineStore("tasks", {
   state() {
     return {
@@ -23,7 +25,12 @@ export default defineStore("tasks", {
     async createTask(user_id, title, status) {
       const { error } = await supabase
         .from('tasks')
-        .insert({ id: 1, name: 'Denmark' })
+        .insert({ 
+          user_id: user_id, 
+          title: title,
+          status: status,
+        })
     }
+
   },
 });

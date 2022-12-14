@@ -28,7 +28,7 @@
       <form v-on:submit.prevent="addNewTodo">
         <label class="add-task"  for="new-todo">New task</label>
         <input
-        v-model="newTodoText"
+        v-model="title"
         id="new-todo"
         placeholder="write here!"
         />
@@ -63,12 +63,13 @@
 
 import { mapStores } from 'pinia'
 import userStore from '../stores/user'
+import tasksStore from '../stores/tasks'
 
   export default {
    
     data() {
       return {
-        newTodoText: '',
+        title: '',
         todos: [
         
         ],
@@ -79,14 +80,20 @@ import userStore from '../stores/user'
       addNewTodo() {
         this.todos.push({
           id: this.nextTodoId++,
-          title: this.newTodoText
+          title: this.title
         })
-        this.newTodoText = ''
+        this.title = ''
+      },
+      addTask() {
+        //this.userStore.signIn(this.emailin, this.passwordin)
+        //Nos hemos quedado aqui. Revisar
+        this.tasksStores.createTask(this.user_id, this.title, this.status)
       },
   
     },
     computed: {
         ...mapStores (userStore),
+        ...mapStores (tasksStore),
       columnHeightFactor() {
       return this.todos.length*21;
     },

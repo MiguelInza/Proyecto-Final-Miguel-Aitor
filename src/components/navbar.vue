@@ -11,23 +11,17 @@
 </template>
 
 <script>
-import { mapStores } from "pinia";
-import userStore from "../stores/user";
 
 export default {
   data() {
     return {};
   },
-  computed: {
-    ...mapStores(userStore),
-  },
+
 };
 </script>
 
 <style scoped>
-.buttons {
 
-}
 
 .button1 {
   display: flex;
