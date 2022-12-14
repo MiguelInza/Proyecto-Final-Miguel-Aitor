@@ -1,8 +1,5 @@
 <template>
-<div class="buttons">
-  <button type="submit" @click="$router.push('/signUp')">Sign Up</button> 
-  <button type="submit" @click="$router.push('/signIn')">Sign In</button>  
-</div>
+WELCOME!!!
 </template>
 
 <script>

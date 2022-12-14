@@ -19,7 +19,7 @@ export default defineStore("user", {
         password: passwordup,
       });
       if (error) throw error;
-      this.$router.push("/Dashboard");
+      this.$router.push("/signIn");
     },
 
     /*
@@ -32,7 +32,7 @@ const data = response.data
 const error = response.error
 */
 
-    async signInWithEmail(emailin, passwordin) {
+    async signIn(emailin, passwordin) {
       const { data, error } = await supabase.auth.signInWithPassword({
         email: emailin,
         password: passwordin,

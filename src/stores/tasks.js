@@ -14,14 +14,16 @@ export default defineStore("tasks", {
   actions: {
     async fetchTasks() {
       const { data: tasks } = await supabase
-
         .from("tasks")
-
         .select("*")
-
         .order("id", { ascending: false });
-
       this.tasks = tasks;
     },
+
+    async createTask() {
+      const { error } = await supabase
+        .from('tasks')
+        .insert({ id: 1, name: 'Denmark' })
+    }
   },
 });
