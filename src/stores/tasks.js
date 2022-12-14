@@ -1,10 +1,6 @@
 // /store/task.js
-
 import { defineStore } from "pinia";
-
 import { supabase } from "../supabase";
-
-
 
 export default defineStore("tasks", {
   state() {

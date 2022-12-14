@@ -10,15 +10,11 @@ const router = createRouter({
     { 
       path: "/Dashboard", 
       component: Dashboard 
-  
     },
-
     { 
       path: "/", 
       component: initialPage 
-  
     },
-
     {
       path: "/signUp",
       component: signUp

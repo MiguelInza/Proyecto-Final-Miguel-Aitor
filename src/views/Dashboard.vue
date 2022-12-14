@@ -1,25 +1,5 @@
 <template>
-
-    <!--
-    <div class="signup">
-    <form @submit.prevent="signUp">
-    <input type="text" v-model="emailup" placeholder="Email">
-    <input type="text" v-model="passwordup" placeholder="Password">
-    <button class="button-sign-up"   type="submit">Sign Up!</button>    
-    </form>
-</div>
-
-<div class="signin">
-    <form @submit.prevent="signIn">
-    <input type="text" v-model="emailin" placeholder="Email">
-    <input type="text" v-model="passwordin" placeholder="Password">
-    <button class="button-sign-in" type="submit">Sign In!</button>    
-    </form>
-</div>
--->
-
-
-    <header>
+  <header>
     <h1>Our tasks</h1>
   </header>
   <div id="div1">
@@ -35,7 +15,6 @@
         <button>Add</button>
       </form>
       <ul>
-
         <li class="listado-tareas"
           v-for="(todo, index) in todos"
           :key="todo.id"
@@ -44,7 +23,6 @@
           <button @click="todos.splice(index, 1)">Remove</button>
           <button @click="">In Proc.</button>
           <button @click="">Done</button>
-        
         </li>
       </ul>
     </section>
@@ -70,9 +48,7 @@ import tasksStore from '../stores/tasks'
     data() {
       return {
         title: '',
-        todos: [
-        
-        ],
+        todos: [],
         nextTodoId: 1
       }
     },
@@ -92,8 +68,8 @@ import tasksStore from '../stores/tasks'
   
     },
     computed: {
-        ...mapStores (userStore),
-        ...mapStores (tasksStore),
+      ...mapStores (userStore),
+      ...mapStores (tasksStore),
       columnHeightFactor() {
       return this.todos.length*21;
     },
