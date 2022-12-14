@@ -1,5 +1,6 @@
 <template>
-    <div class="all-buttons">
+
+    <!--
     <div class="signup">
     <form @submit.prevent="signUp">
     <input type="text" v-model="emailup" placeholder="Email">
@@ -15,7 +16,7 @@
     <button class="button-sign-in" type="submit">Sign In!</button>    
     </form>
 </div>
-</div>
+-->
 
 
     <header>
@@ -67,8 +68,6 @@ import userStore from '../stores/user'
    
     data() {
       return {
-        passwordup: "", 
-        emailup: "",
         newTodoText: '',
         todos: [
         
@@ -84,10 +83,7 @@ import userStore from '../stores/user'
         })
         this.newTodoText = ''
       },
-      signUp () {
-        this.userStore.signUp(this.emailup, this.passwordup)
-
-      }
+  
     },
     computed: {
         ...mapStores (userStore),
@@ -115,7 +111,7 @@ import userStore from '../stores/user'
     padding-left: 7px;
 }
 
-
+/*
 .signin {
     display: flex;
    
@@ -123,7 +119,6 @@ import userStore from '../stores/user'
     margin-top: 20px;
     padding-right: 30px;
 }
-
 .signup {
     display: flex;
    
@@ -131,14 +126,14 @@ import userStore from '../stores/user'
     margin-top: 20px;
  padding-right: 30px;
 }
-
-.button-sign-up {
-margin: 0 10px;
-}
 .button-sign-in {
     margin: 0 10px;
     padding: 0 9px;
 }
+.button-sign-up {
+margin: 0 10px;
+}
+*/
 
 header {
   background-color: rgb(172, 172, 225);

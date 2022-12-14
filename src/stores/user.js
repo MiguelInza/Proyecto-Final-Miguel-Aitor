@@ -1,7 +1,5 @@
 // /store/user.js
 
-
-
 import { defineStore } from "pinia";
 
 import { supabase } from "../supabase";
@@ -28,9 +26,10 @@ export default defineStore("user", {
       });
 
       if (error) throw error;
+      this.$router.push("/Dashboard");
     },
-    
-/*
+
+    /*
  - otra forma del async de arriba -
 const response = await supabase.auth.signUp({
   email: 'example@email.com',
@@ -40,20 +39,20 @@ const response = await supabase.auth.signUp({
 const data = response.data
 const error = response.error
 */
-    
-    async  signInWithEmail(emailin, passwordin) {
+
+    async signInWithEmail(emailin, passwordin) {
       const { data, error } = await supabase.auth.signInWithPassword({
         email: emailin,
         password: passwordin,
-      })
+      });
 
       if (error) throw error;
 
-      if (data.user) this.user = data.user;
-    }
-
-    
-  
+      if (data.user) {
+        this.user = data.user;
+        this.$router.push("/Dashboard");
+      }
+    },
   },
   persist: {
     enabled: true,
