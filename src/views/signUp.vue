@@ -31,7 +31,6 @@ computed: {
         ...mapStores (userStore),
 }
 }
-
 </script>
 
 <style scoped>

@@ -1,7 +1,5 @@
 // /store/user.js
-
 import { defineStore } from "pinia";
-
 import { supabase } from "../supabase";
 
 export default defineStore("user", {
@@ -10,21 +8,16 @@ export default defineStore("user", {
       user: null,
     };
   },
-
   actions: {
     async fetchUser() {
       const user = await supabase.auth.user();
-
       this.user = user;
     },
-
     async signUp(emailup, passwordup) {
       const { data, error } = await supabase.auth.signUp({
         email: emailup,
-
         password: passwordup,
       });
-
       if (error) throw error;
       this.$router.push("/Dashboard");
     },
@@ -35,7 +28,6 @@ const response = await supabase.auth.signUp({
   email: 'example@email.com',
   password: 'example-password',
 })
-
 const data = response.data
 const error = response.error
 */
@@ -45,9 +37,7 @@ const error = response.error
         email: emailin,
         password: passwordin,
       });
-
       if (error) throw error;
-
       if (data.user) {
         this.user = data.user;
         this.$router.push("/Dashboard");
@@ -56,11 +46,9 @@ const error = response.error
   },
   persist: {
     enabled: true,
-
     strategies: [
       {
         key: "user",
-
         storage: localStorage,
       },
     ],
