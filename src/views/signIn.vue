@@ -9,8 +9,6 @@
 </template>
 
 <script>
-
-
 import { mapStores } from 'pinia'
 import userStore from '../stores/user'
 
@@ -21,15 +19,13 @@ export default {
         emailin: "",
       }
     },
-
 methods: {
     signIn () {
         this.userStore.signIn(this.emailin, this.passwordin)
-
       }
 },
 computed: {
-        ...mapStores (userStore),
+    ...mapStores (userStore),
 }
 }
 </script>
@@ -37,12 +33,10 @@ computed: {
 <style scoped>
 .signin {
   display: flex;
-
   justify-content: right;
   margin-top: 20px;
   padding-right: 30px;
 }
-
 .button-sign-in {
   margin: 0 10px;
   padding: 0 9px;

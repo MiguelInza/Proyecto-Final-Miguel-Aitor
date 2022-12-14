@@ -8,7 +8,6 @@ export default defineStore("tasks", {
       tasks: null,
     };
   },
-
   actions: {
     async fetchTasks() {
       const { data: tasks } = await supabase
@@ -17,7 +16,6 @@ export default defineStore("tasks", {
         .order("id", { ascending: false });
       this.tasks = tasks;
     },
-
     async createTask(user_id, title, status) {
       const { error } = await supabase
         .from('tasks')
@@ -27,6 +25,5 @@ export default defineStore("tasks", {
           status: status,
         })
     }
-
   },
 });

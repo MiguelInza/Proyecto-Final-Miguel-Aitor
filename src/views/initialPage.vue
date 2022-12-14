@@ -1,5 +1,7 @@
 <template>
-WELCOME!!!
+    <div id="iniPage">
+        Soy la initialPage
+    </div>
 </template>
 
 <script>
@@ -18,9 +20,8 @@ export default {
 </script>
 
 <style scoped>
-.buttons {
-    display: flex;
-    flex-direction: column;
+#iniPage {
+    background-color: rgb(208, 193, 222);
 }
 
 </style>

@@ -22,15 +22,15 @@ export default defineStore("user", {
       this.$router.push("/signIn");
     },
 
-    /*
- - otra forma del async de arriba -
-const response = await supabase.auth.signUp({
-  email: 'example@email.com',
-  password: 'example-password',
-})
-const data = response.data
-const error = response.error
-*/
+      /*
+      - otra forma del async de arriba -
+      const response = await supabase.auth.signUp({
+        email: emailup,
+        password: passwordup,
+      })
+      const data = response.data
+      const error = response.error
+      */
 
     async signIn(emailin, passwordin) {
       const { data, error } = await supabase.auth.signInWithPassword({
