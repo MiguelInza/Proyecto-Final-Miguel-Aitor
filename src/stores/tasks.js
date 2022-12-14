@@ -20,7 +20,7 @@ export default defineStore("tasks", {
       this.tasks = tasks;
     },
 
-    async createTask() {
+    async createTask(user_id, title, status) {
       const { error } = await supabase
         .from('tasks')
         .insert({ id: 1, name: 'Denmark' })
