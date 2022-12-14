@@ -1,12 +1,21 @@
 <template>
-    <div id="login">
+    <div class="all-buttons">
+    <div class="signup">
     <form @submit.prevent="signUp">
-    <input type="text" v-model="email" placeholder="Email">
-    <input type="text" v-model="password" placeholder="Password">
-    <button type="submit">Sign Up!</button>    
+    <input type="text" v-model="emailup" placeholder="Email">
+    <input type="text" v-model="passwordup" placeholder="Password">
+    <button class="button-sign-up"   type="submit">Sign Up!</button>    
     </form>
 </div>
 
+<div class="signin">
+    <form @submit.prevent="signIn">
+    <input type="text" v-model="emailin" placeholder="Email">
+    <input type="text" v-model="passwordin" placeholder="Password">
+    <button class="button-sign-in" type="submit">Sign In!</button>    
+    </form>
+</div>
+</div>
 
 
     <header>
@@ -16,21 +25,26 @@
     <section id="sec1" :style="{ height: 170 + columnHeightFactor + 'px' }">
       <h2>TO-DO list</h2>
       <form v-on:submit.prevent="addNewTodo">
-        <label class="add-task"  for="new-todo">Add task</label>
+        <label class="add-task"  for="new-todo">New task</label>
         <input
         v-model="newTodoText"
         id="new-todo"
-        placeholder="Add task!"
+        placeholder="write here!"
         />
         <button>Add</button>
       </form>
-      <ul >
-        <TodoItem id="listado-tareas"
+      <ul>
+
+        <li class="listado-tareas"
           v-for="(todo, index) in todos"
           :key="todo.id"
-          :title="todo.title"
-          @remove="todos.splice(index, 1)">
-    </TodoItem>
+          :title="todo.title">
+          {{ todo.title }}
+          <button @click="todos.splice(index, 1)">Remove</button>
+          <button @click="">In Proc.</button>
+          <button @click="">Done</button>
+        
+        </li>
       </ul>
     </section>
     <section id="sec2">
@@ -45,32 +59,21 @@
 
 <script>
 
-import TodoItem from '../components/TodoItem.vue'
+
 import { mapStores } from 'pinia'
 import userStore from '../stores/user'
 
   export default {
-    components: { TodoItem },
+   
     data() {
       return {
-        password: "", 
-        email: "",
+        passwordup: "", 
+        emailup: "",
         newTodoText: '',
         todos: [
-          {
-            id: 1,
-            title: 'Task1'
-          },
-          {
-            id: 2,
-            title: 'Task2'
-          },
-          {
-            id: 3,
-            title: 'Task3'
-          }
+        
         ],
-        nextTodoId: 4
+        nextTodoId: 1
       }
     },
     methods: {
@@ -82,7 +85,7 @@ import userStore from '../stores/user'
         this.newTodoText = ''
       },
       signUp () {
-        this.userStore.signUp(this.email, this.password)
+        this.userStore.signUp(this.emailup, this.passwordup)
 
       }
     },
@@ -104,19 +107,39 @@ import userStore from '../stores/user'
     border-radius: 5px;
 }
 
-#listado-tareas {
+.listado-tareas {
     background-color: rgb(87, 195, 195);
     margin: 4px;
     border-radius: 7px;
     list-style: none;
-    padding-left: 15px;
+    padding-left: 7px;
 }
 
-#login {
+
+.signin {
     display: flex;
+   
     justify-content: right;
     margin-top: 20px;
+    padding-right: 30px;
 }
+
+.signup {
+    display: flex;
+   
+    justify-content: right;
+    margin-top: 20px;
+ padding-right: 30px;
+}
+
+.button-sign-up {
+margin: 0 10px;
+}
+.button-sign-in {
+    margin: 0 10px;
+    padding: 0 9px;
+}
+
 header {
   background-color: rgb(172, 172, 225);
   /*width: 90vw;*/
@@ -137,7 +160,7 @@ h2 {
 #sec1 {
   background-color: rgb(207, 43, 70);
   border-style: double;
-  width: 300px;
+  width: 350px;
   /*height: 600px;*/
   margin: 10px;
 border-radius: 20px;
@@ -146,7 +169,7 @@ border-radius: 20px;
   border-style: double;
   /*background-color:red;*/
   background-color: rgb(240, 240, 131);
-  width: 300px;
+  width: 350px;
   height: 170px;
   margin: 10px;
   border-radius: 15px;
@@ -155,7 +178,7 @@ border-radius: 20px;
   border-style: double;
   /*background-color: green;*/
   background-color: rgb(122, 223, 122);
-  width: 300px;
+  width: 350px;
   height: 170px;
   margin: 10px;
   border-radius: 15px;
