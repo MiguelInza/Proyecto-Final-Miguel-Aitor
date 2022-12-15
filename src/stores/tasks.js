@@ -36,7 +36,7 @@ export default defineStore("tasks", {
         .eq('id', taskId)
         this.fetchTasks()
     },
-    async updateTask(taskId) {
+    async updateTask(taskId, title) {
       const { error } = await supabase
         .from('tasks')
         .update({ title: title, })

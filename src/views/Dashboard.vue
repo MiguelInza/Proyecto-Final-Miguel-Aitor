@@ -5,17 +5,24 @@
   <div id="div1">
     <section id="sec1">
       <h2>TO-DO list</h2>
-      <form v-on:submit.prevent="newTask">
-        <label class="add-task" for="new-todo">New task</label>
-        <input v-model="title" id="new-todo" placeholder="write here!" />
-        <button>Add</button>
+      <form @submit.prevent="newTask">
+        <button>Add New Task</button>
+        <input v-model="title" placeholder="write here!" />
       </form>
+
       <ul>
         <li class="listado-tareas" v-for="task in tasksStore.tasks">
           {{ task.title }}
           <div class="allButtons">
-            <button type="text" @click="removeTask(task.id)">Remove</button>
-            <button type="text" @click="editTask(task.id)">Edit</button>
+
+           
+            <form @submit.prevent="editTask(task.id, task.title)">
+              <button>Edit</button>
+              <input v-if="true" v-model="task.title" placeholder="Edit here!"/> 
+            </form>
+           
+
+            <button @click="removeTask(task.id)">Remove</button>
             <button @click="">In Proc.</button>
             <button @click="">Done</button>
           </div>
@@ -40,6 +47,7 @@ export default {
   data() {
     return {
       title: "",
+      editTitle: "",
       todos: [],
       status: 1,
     };
@@ -56,8 +64,8 @@ export default {
     removeTask(taskId) {
       this.tasksStore.deleteTask(taskId);
     },
-    editTask(taskId) {
-      this.tasksStore.updateTask(taskId);
+    editTask(taskId, title) {
+      this.tasksStore.updateTask(taskId, title);
     },
   },
   computed: {
