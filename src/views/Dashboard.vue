@@ -15,10 +15,15 @@
           {{ task.title }}
           <div class="allButtons">
 
-           
+           <!--
             <form @submit.prevent="editTask(task.id, task.title)">
               <button>Edit</button>
               <input v-if="false" v-model="task.title" placeholder="Edit here!"/> 
+            </form>
+            -->
+            <form @submit.prevent="editTask(task.id, task.title)">
+              <button @click="boton = !boton">Edit</button>
+              <input v-if="boton" v-model="task.title" placeholder="Edit here!"/> 
             </form>
            
 
@@ -50,6 +55,7 @@ export default {
       editTitle: "",
       todos: [],
       status: 1,
+      boton: false,
     };
   },
   methods: {
