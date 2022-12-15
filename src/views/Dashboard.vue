@@ -18,7 +18,7 @@
            
             <form @submit.prevent="editTask(task.id, task.title)">
               <button>Edit</button>
-              <input v-if="true" v-model="task.title" placeholder="Edit here!"/> 
+              <input v-if="false" v-model="task.title" placeholder="Edit here!"/> 
             </form>
            
 
