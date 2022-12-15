@@ -1,46 +1,45 @@
 <template>
-
-    <div class="signup">
+  <div class="signup">
     <form @submit.prevent="signUp">
-    <input type="text" v-model="emailup" placeholder="Email">
-    <input type="text" v-model="passwordup" placeholder="Password">
-    <button class="button-sign-up"   type="submit">Sign Up!</button>    
+      <input type="email" v-model="emailup" placeholder="Email" />
+      <input type="password" v-model="passwordup" placeholder="Password" />
+      <button class="button-sign-up" type="submit">Sign Up!</button>
     </form>
-</div>
+  </div>
 </template>
 
 <script>
-import { mapStores } from 'pinia'
-import userStore from '../stores/user'
+import { mapStores } from "pinia";
+import userStore from "../stores/user";
 
 export default {
-    data() {
-      return {
-        passwordup: "", 
-        emailup: "",
-      }
+  data() {
+    return {
+      passwordup: "",
+      emailup: "",
+    };
+  },
+
+  methods: {
+    signUp() {
+      this.userStore.signUp(this.emailup, this.passwordup);
+      alert("Confirm your email address by clicking a link in your email");
     },
-
-methods: {
-    signUp () {
-        this.userStore.signUp(this.emailup, this.passwordup)
-
-      }
-},
-computed: {
-        ...mapStores (userStore),
-}
-}
+  },
+  computed: {
+    ...mapStores(userStore),
+  },
+};
 </script>
 
 <style scoped>
 .signup {
-    display: flex;
-    justify-content: right;
-    margin-top: 20px;
- padding-right: 30px;
+  display: flex;
+  justify-content: right;
+  margin-top: 10px;
+  padding: 10px;
 }
 .button-sign-up {
-margin: 0 10px;
+  margin: 0 10px;
 }
 </style>

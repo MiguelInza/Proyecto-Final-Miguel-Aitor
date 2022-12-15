@@ -6,6 +6,9 @@ export default defineStore("tasks", {
   state() {
     return {
       tasks: null,
+      user_id: "",
+      title: "",
+      status: 1,
     };
   },
   actions: {
