@@ -3,7 +3,7 @@
     <h1>Our tasks</h1>
   </header>
   <div id="div1">
-    <section id="sec1" :style="{ height: 170 + columnHeightFactor + 'px' }">
+    <section id="sec1">
       <h2>TO-DO list</h2>
       <form v-on:submit.prevent="newTask">
         <label class="add-task" for="new-todo">New task</label>
@@ -11,15 +11,14 @@
         <button>Add</button>
       </form>
       <ul>
-        <li
-          class="listado-tareas"
-          v-for="(task) in tasksStore.tasks"
-        >
+        <li class="listado-tareas" v-for="task in tasksStore.tasks">
           {{ task.title }}
-          <button @click="removeTask(task.id)">Remove</button>
-          <!-- <button @click="todos.splice(index, 1)">Remove</button> -->
-          <button @click="">In Proc.</button>
-          <button @click="">Done</button>
+          <div class="allButtons">
+            <button type="text" @click="removeTask(task.id)">Remove</button>
+            <button type="text" @click="editTask(task.id)">Edit</button>
+            <button @click="">In Proc.</button>
+            <button @click="">Done</button>
+          </div>
         </li>
       </ul>
     </section>
@@ -42,36 +41,32 @@ export default {
     return {
       title: "",
       todos: [],
-      nextTodoId: 1,
       status: 1,
     };
   },
   methods: {
-    addNewTodo() {
-      this.todos.push({
-        id: this.nextTodoId++,
-        title: this.title,
-      });
+    newTask() {
+      this.tasksStore.createTask(
+        this.userStore.user.id,
+        this.title,
+        this.status
+      );
       this.title = "";
     },
-    newTask(){
-      this.tasksStore.createTask(this.userStore.user.id, this.title, this.status)
+    removeTask(taskId) {
+      this.tasksStore.deleteTask(taskId);
     },
-    removeTask(taskId){
-      this.tasksStore.deleteTask(taskId)
+    editTask(taskId) {
+      this.tasksStore.updateTask(taskId);
     },
   },
   computed: {
     ...mapStores(userStore),
     ...mapStores(tasksStore),
-    columnHeightFactor() {
-      //return this.tasksStore.tasks.length * 21;
-      return this.todos.length * 21;
-    },
   },
-  mounted(){
-    this.tasksStore.fetchTasks()
-  }
+  mounted() {
+    this.tasksStore.fetchTasks();
+  },
 };
 </script>
 
@@ -84,11 +79,18 @@ export default {
   border-radius: 5px;
 }
 .listado-tareas {
+  word-wrap: break-word;
   background-color: rgb(87, 195, 195);
   margin: 4px;
   border-radius: 7px;
   list-style: none;
-  padding-left: 7px;
+  padding: 10px;
+}
+
+.allButtons {
+  display: flex;
+  justify-content: space-around;
+  padding: 8px;
 }
 
 header {
