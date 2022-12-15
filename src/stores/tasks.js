@@ -28,6 +28,13 @@ export default defineStore("tasks", {
           status: status,
         })
         this.fetchTasks()
+    },
+    async deleteTask(taskId) {
+      const { error } = await supabase
+        .from('tasks')
+        .delete()
+        .eq('id', taskId)
+        this.fetchTasks()
     }
   },
 });

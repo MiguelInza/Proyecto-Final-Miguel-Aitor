@@ -5,7 +5,7 @@
   <div id="div1">
     <section id="sec1" :style="{ height: 170 + columnHeightFactor + 'px' }">
       <h2>TO-DO list</h2>
-      <form v-on:submit.prevent="createTask">
+      <form v-on:submit.prevent="newTask">
         <label class="add-task" for="new-todo">New task</label>
         <input v-model="title" id="new-todo" placeholder="write here!" />
         <button>Add</button>
@@ -13,12 +13,11 @@
       <ul>
         <li
           class="listado-tareas"
-          v-for="(todo, index) in tasksStore.tasks"
-          :key="todo.id"
-          :title="todo.title"
+          v-for="(task) in tasksStore.tasks"
         >
-          {{ todo.title }}
-          <button @click="todos.splice(index, 1)">Remove</button>
+          {{ task.title }}
+          <button @click="removeTask(task.id)">Remove</button>
+          <!-- <button @click="todos.splice(index, 1)">Remove</button> -->
           <button @click="">In Proc.</button>
           <button @click="">Done</button>
         </li>
@@ -44,8 +43,6 @@ export default {
       title: "",
       todos: [],
       nextTodoId: 1,
-      //user_id: "1bb0ad6b-1736-46ac-95e3-7a2efa73cc1a",
-      //se coge directamente de Pinia
       status: 1,
     };
   },
@@ -57,22 +54,23 @@ export default {
       });
       this.title = "";
     },
-    
-    createTask(){
+    newTask(){
       this.tasksStore.createTask(this.userStore.user.id, this.title, this.status)
     },
+    removeTask(taskId){
+      this.tasksStore.deleteTask(taskId)
+    },
   },
-
   computed: {
     ...mapStores(userStore),
     ...mapStores(tasksStore),
     columnHeightFactor() {
+      //return this.tasksStore.tasks.length * 21;
       return this.todos.length * 21;
     },
   },
   mounted(){
     this.tasksStore.fetchTasks()
-
   }
 };
 </script>
