@@ -27,6 +27,7 @@ export default defineStore("tasks", {
           title: title,
           status: status,
         })
+        this.fetchTasks()
     }
   },
 });

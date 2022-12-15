@@ -8,6 +8,9 @@
       <div class="button2">
         <button type="submit" @click="$router.push('/signIn')">Sign In</button>
       </div>
+      <div class="button3">
+        <button type="submit" @click="$router.push('/signOut')">Sign Out</button>
+      </div>
     </div>
   </div> 
 </template>
@@ -38,16 +41,29 @@ export default {
 .button2 {
   margin:15px;
 }
+.button3 {
+  margin:15px;
+}
 .button1 button{
 width: 200px;
 padding: 10px;
 border-radius: 8px;
 background-color: aqua;
+cursor: pointer;
 }
 .button2 button{
 width: 200px;
 padding: 10px;
 border-radius: 8px;
-background-color: rgb(40, 168, 168);
+background-color: rgb(134, 164, 164);
+cursor: pointer;
+}
+
+.button3 button{
+width: 200px;
+padding: 10px;
+border-radius: 8px;
+background-color: rgb(19, 156, 156);
+cursor: pointer;
 }
 </style>

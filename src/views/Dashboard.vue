@@ -5,7 +5,7 @@
   <div id="div1">
     <section id="sec1" :style="{ height: 170 + columnHeightFactor + 'px' }">
       <h2>TO-DO list</h2>
-      <form v-on:submit.prevent="addNewTodo">
+      <form v-on:submit.prevent="createTask">
         <label class="add-task" for="new-todo">New task</label>
         <input v-model="title" id="new-todo" placeholder="write here!" />
         <button>Add</button>
@@ -13,7 +13,7 @@
       <ul>
         <li
           class="listado-tareas"
-          v-for="(todo, index) in todos"
+          v-for="(todo, index) in tasksStore.tasks"
           :key="todo.id"
           :title="todo.title"
         >
@@ -44,7 +44,8 @@ export default {
       title: "",
       todos: [],
       nextTodoId: 1,
-      user_id: "",
+      //user_id: "1bb0ad6b-1736-46ac-95e3-7a2efa73cc1a",
+      //se coge directamente de Pinia
       status: 1,
     };
   },
@@ -56,11 +57,12 @@ export default {
       });
       this.title = "";
     },
-    addTask() {
-      //Nos hemos quedado aqui. Revisar
-      this.tasksStores.createTask(this.user_id, this.title, this.status);
+    
+    createTask(){
+      this.tasksStore.createTask(this.userStore.user.id, this.title, this.status)
     },
   },
+
   computed: {
     ...mapStores(userStore),
     ...mapStores(tasksStore),
@@ -68,6 +70,10 @@ export default {
       return this.todos.length * 21;
     },
   },
+  mounted(){
+    this.tasksStore.fetchTasks()
+
+  }
 };
 </script>
 
