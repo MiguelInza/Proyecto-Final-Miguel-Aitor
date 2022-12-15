@@ -21,7 +21,9 @@ export default {
     },
 methods: {
     signIn () {
-        this.userStore.signIn(this.emailin, this.passwordin)
+        this.userStore.signIn(this.emailin, this.passwordin);
+        
+        //alert("Email or Password not found");
       }
 },
 computed: {

@@ -1,11 +1,7 @@
 <template>
-  <div>
-    <navbar />
-  </div>
+  <navbar />
   <RouterView />
-  <div>
-    <foter />
-  </div>
+  <foter />
 </template>
 
 <script>
