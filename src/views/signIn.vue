@@ -38,6 +38,8 @@ computed: {
   justify-content: right;
   margin-top: 10px;
   padding: 10px;
+  height: 600px;
+  background-color: bisque;
 }
 .button-sign-in {
   margin: 0 10px;

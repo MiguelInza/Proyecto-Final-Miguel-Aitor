@@ -41,7 +41,7 @@ export default defineStore("tasks", {
         .from('tasks')
         .update({ title: title, })
         .eq('id', taskId)
-        //this.fetchTasks()
+        this.fetchTasks()
     }
   },
 });

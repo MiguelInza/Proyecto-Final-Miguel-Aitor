@@ -8,34 +8,45 @@
       <form @submit.prevent="newTask">
         <button>Add New Task</button>
         <input v-model="title" placeholder="write here!" />
+        <blog-post v-bind:status="1"></blog-post>
       </form>
-
       <ul>
         <li class="listado-tareas" v-for="task in tasksStore.tasks">
           {{ task.title }}
-          <div class="allButtons">
-
-           <!--
-            <form @submit.prevent="editTask(task.id, task.title)">
-              <button>Edit</button>
-              <input v-if="false" v-model="task.title" placeholder="Edit here!"/> 
-            </form>
-            -->
+          <div class="allButtons" v-if="status=1">
             <form @submit.prevent="editTask(task.id, task.title)">
               <button @click="boton = !boton">Edit</button>
-              <input v-if="boton" v-model="task.title" placeholder="Edit here!"/> 
+              <input v-if="boton" v-model="task.title"/> 
             </form>
-           
-
             <button @click="removeTask(task.id)">Remove</button>
-            <button @click="">In Proc.</button>
+            <button @click="">In Process</button>
             <button @click="">Done</button>
           </div>
         </li>
       </ul>
     </section>
+
     <section id="sec2">
       <h2>In process</h2>
+      <form @submit.prevent="newTask">
+        <button>Add New Task</button>
+        <input v-model="title2" placeholder="write here!" />
+        <blog-post v-bind:status="2"></blog-post>
+      </form>
+      <ul>
+        <li class="listado-tareas" v-for="task in tasksStore.tasks">
+          {{ task.title2 }}
+          <div class="allButtons" v-if="status=2">
+            <form @submit.prevent="editTask(task.id, task.title2)">
+              <button @click="boton = !boton">Edit</button>
+              <input v-if="boton" v-model="task.title2"/> 
+            </form>
+            <button @click="removeTask(task.id)">Remove</button>
+            <button @click="">In Process</button>
+            <button @click="">Done</button>
+          </div>
+        </li>
+      </ul>
     </section>
     <section id="sec3">
       <h2>Done</h2>
@@ -52,6 +63,8 @@ export default {
   data() {
     return {
       title: "",
+      title2: "",
+      title3: "",
       editTitle: "",
       todos: [],
       status: 1,
@@ -133,21 +146,19 @@ h2 {
   border-radius: 20px;
 }
 #sec2 {
-  border-style: double;
-  /*background-color:red;*/
   background-color: rgb(240, 240, 131);
+  border-style: double;
   width: 350px;
-  height: 170px;
+  /*height: 170px;*/
   margin: 10px;
-  border-radius: 15px;
+  border-radius: 20px;
 }
 #sec3 {
-  border-style: double;
-  /*background-color: green;*/
   background-color: rgb(122, 223, 122);
+  border-style: double;
   width: 350px;
-  height: 170px;
+  /*height: 170px;*/
   margin: 10px;
-  border-radius: 15px;
+  border-radius: 20px;
 }
 </style>

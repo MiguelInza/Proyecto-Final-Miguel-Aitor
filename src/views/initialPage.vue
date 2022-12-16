@@ -22,6 +22,7 @@ export default {
 <style scoped>
 #iniPage {
     background-color: rgb(208, 193, 222);
+    height: 600px;
 }
 
 </style>

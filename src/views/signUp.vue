@@ -38,6 +38,8 @@ export default {
   justify-content: right;
   margin-top: 10px;
   padding: 10px;
+  height: 600px;
+  background-color: bisque;
 }
 .button-sign-up {
   margin: 0 10px;

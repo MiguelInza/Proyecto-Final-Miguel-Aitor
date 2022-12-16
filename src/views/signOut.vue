@@ -1,5 +1,7 @@
 <template>
-
+<div class="signout">
+  Sign Out
+</div>
 </template>
 
 <script>
@@ -22,5 +24,8 @@ computed: {
 </script>
 
 <style scoped>
-
+.signout {
+  height: 600px;
+  background-color: bisque;
+}
 </style>
