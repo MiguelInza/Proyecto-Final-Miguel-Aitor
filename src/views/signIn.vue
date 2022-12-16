@@ -20,6 +20,7 @@ export default {
       }
     },
 methods: {
+  
     signIn () {
         this.userStore.signIn(this.emailin, this.passwordin);
         
