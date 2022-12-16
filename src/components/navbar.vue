@@ -2,11 +2,11 @@
   
   <nav>
 
-    <div class="img-logo">
-<img class="logo" src="/src/images/logo2.png" alt="logo" width="150" />
+    <div class="img-logo2">
+<img class="logo" src="/src/images/logo2.png" alt="logo" width="140" />
   </div>
-    <div class="img-logo">
-<img class="logo" src="/src/images/logo1.png" alt="logo" width="500" />
+    <div class="img-logo1">
+<img class="logo" src="/src/images/logo1.png" alt="logo" width="400" />
 
   </div>
 
@@ -19,7 +19,7 @@
         <button type="submit" @click="$router.push('/signIn')">Sign In</button>
       </div>
       <div class="button3">
-        <button type="submit" @click="$router.push('/signOut')">Sign Out</button>
+        <button type="submit" @click="$router.push('/signOut')">Log Out</button>
       </div>
     </div>
   </nav> 
@@ -45,12 +45,7 @@ nav {
   background-color: rgb(218, 236, 118);
 }
 
-h1 {
-  font-family: sans-serif;
-  font-family: cursive;
-  font-size: 50px;
- 
-}
+
 .buttons {
   display: flex;
   flex-direction: column;
@@ -58,20 +53,20 @@ h1 {
 
 
 .button1 button{
-  margin:12px;
-width: 170px;
-padding: 10px;
-font-size: 14px;
+  margin:10px;
+width: 150px;
+padding: 7px;
+font-size: 12px;
 font-weight:  bolder;
 border-radius: 8px;
 background-color: rgb(134, 164, 164);
 cursor: pointer;
 }
 .button2 button{
-  margin:12px;
-width: 170px;
-padding: 10px;
-font-size: 14px;
+  margin:10px;
+width: 150px;
+padding: 7px;
+font-size: 12px;
 font-weight:  bolder;
 border-radius: 8px;
 background-color: rgb(58, 165, 165);
@@ -79,10 +74,10 @@ cursor: pointer;
 }
 
 .button3 button{
-  margin:12px;
-width: 170px;
-padding: 10px;
-font-size: 14px;
+  margin:10px;
+width: 150px;
+padding: 7px;
+font-size: 12px;
 font-weight:  bolder;
 border-radius: 8px;
 
