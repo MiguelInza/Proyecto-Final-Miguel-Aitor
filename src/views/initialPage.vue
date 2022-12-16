@@ -47,7 +47,7 @@ body {
   width: 550px;
   height: 380px;
   border: solid gray;
-  background-image: url("/src/images/initial-img.png"c);
+  background-image: url("/src/images/initial-img.png");
   background-size: cover;
   background-position: center;
 }
