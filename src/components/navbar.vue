@@ -2,11 +2,11 @@
   
   <nav>
 
-    <div class="img-logo2">
-<img class="logo" src="/src/images/logo2.png" alt="logo" width="120" />
+    <div>
+<img class="logo-emoji" src="/src/images/logo2.png" alt="logo" />
   </div>
-    <div class="img-logo1">
-<img class="logo" src="/src/images/logo1.png" alt="logo" width="400" />
+    <div>
+<img class="logo-img-main" src="/src/images/logo1.png" alt="logo"  />
 
   </div>
 
@@ -42,9 +42,14 @@ nav {
   justify-content: space-between;
   align-items: center;
   border-radius: 30px;
-  background-color: rgb(218, 236, 118);
+  background-color:rgb(186, 219, 197);
 }
-
+.logo-emoji {
+  width: 120px;
+}
+.logo-img-main {
+width: 400px
+}
 
 .buttons {
   display: flex;
@@ -92,8 +97,42 @@ nav {
   flex-direction: column;
   align-items: center;
 }
-.img-logo {
-  width: 50%;
+.logo-emoji {
+  width: 80px;
+
+}
+.logo-img-main {
+width: 240px;
+margin-bottom: 10px;
+}
+.button1 button{
+  margin:7px;
+width: 100px;
+padding: 7px;
+font-size: 10px;
+font-weight:  bolder;
+border-radius: 5px;
+
+}
+.button2 button{
+  margin:7px;
+width: 100px;
+padding: 7px;
+font-size: 10px;
+font-weight:  bolder;
+border-radius: 5px;
+}
+
+.button3 button{
+  margin:7px;
+width: 100px;
+padding: 7px;
+font-size: 10px;
+font-weight:  bolder;
+border-radius: 5px;
+}
+.buttons {
+margin-bottom: 10px;
 }
 
 }

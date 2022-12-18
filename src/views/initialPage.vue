@@ -35,7 +35,7 @@ export default {
 
 <style scoped>
 body {
-  background-color: rgb(165, 108, 219);
+  background-color: rgb(206, 186, 224);
   border-radius: 30px;
   height: 30px;
   height: 400px;
@@ -44,9 +44,9 @@ body {
   align-items: center;
 }
 .container {
-  width: 550px;
+  width: 650px;
   height: 380px;
-  border: solid gray;
+  /*border: solid gray;*/
   background-image: url("/src/images/initial-img.png");
   background-size: cover;
   background-position: center;
@@ -55,9 +55,11 @@ body {
 
 h1 {
   width: 400px;
+  font-size: 38px;
 }
 h2 {
   width: 400px;
+  font-size: 26px;
 }
 
 @media (max-width: 667px) {
@@ -67,6 +69,23 @@ h2 {
     flex-direction: column;
     align-items: center;
   }
+  .container {
+  width: 300px;
+  height: 1500px;
+  /*border: solid gray;*/
+  background-image: url("/src/images/initial-img.png");
+  background-size: cover;
+  background-position: center;
+}
+h1 {
+  width: 200px;
+  font-size: 25px;
+}
+h2 {
+  width: 200px;
+  font-size: 18px;
+}
+
 }
 
 </style>

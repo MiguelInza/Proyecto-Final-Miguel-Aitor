@@ -1,18 +1,18 @@
 <template>
 
   <footer>
-    <div class="img-logo1">
-<img class="logo" src="/src/images/logo1.png" alt="logo" width="150" />
+    <div>
+<img class="logo-principal" src="/src/images/logo1.png" alt="logo" width="150" />
   </div>
   <div id="text-footer">
-  Siguenos:
+  Siguenos por las redes:
   </div>
-  <div class="logos-redes">
-  <img class="logo" src="/src/images/logo-fb.png" alt="logo" width="28" />
-  <img class="logo" src="/src/images/logo-tweet.png" alt="logo" width="40" />
-  <img class="logo" src="/src/images/logo-linked.png" alt="logo" width="40" />
-  <img class="logo" src="/src/images/logo-yout.png" alt="logo" width="40" />
-  <img class="logo" src="/src/images/logo-insta.png" alt="logo" width="40" />
+  <div id="logos-redes">
+  <img class="logo" src="/src/images/logo-fb.png" alt="logo" />
+  <img class="logo" src="/src/images/logo-tweet.png" alt="logo"  />
+  <img class="logo" src="/src/images/logo-linked.png" alt="logo"  />
+  <img class="logo" src="/src/images/logo-yout.png" alt="logo"  />
+  <img class="logo" src="/src/images/logo-insta.png" alt="logo"  />
 </div>
 </footer>
 </template>
@@ -32,19 +32,27 @@ footer {
   justify-content: space-around;
   align-items: center;
   border-radius: 30px;
-  background-color: rgb(192, 211, 83);
+  background-color:rgb(186, 219, 197);
   margin-top: 10px;
   padding: 20px;
 }
 
 #text-footer {
   font-size: 20px;
+  font-family: "Trebuchet MS", Verdana, sans-serif;
+  font-weight: bold;
 }
-.logos-redes {
+
+.logo{
+  width: 28px;
+  height: 28px;
+}
+#logos-redes {
   width: 500px;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  object-fit: cover;
 }
 @media (max-width: 667px) {
 
@@ -52,6 +60,26 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.logo-principal {
+width: 120px;
+margin-bottom: 10px;
+}
+.logo{
+  margin-top: 10px;
+  width: 22px;
+  height: 22px;
+}
+#text-footer {
+  font-size: 15px;
+ 
+  
+}
+
+#logos-redes {
+  width: 300px;
+
 }
 }
 
