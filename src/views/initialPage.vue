@@ -6,11 +6,11 @@
 -->
     <div class="container"> </div>
     
-      <!--
+    
+    <div>
+<img class="logo-initial-page" src="/src/images/initial-img.png" alt="maind-img" />
     </div>
-<img class="logo" src="/src/images/initial-img.png" alt="maind-img" />
-<div>
-    --><div>
+    <div>
       <h1>Administra tus tareas con Rememer it.</h1>
       <h2>
         La mejor forma de planificarte la semana con un click y sin esfuerzo.
@@ -43,19 +43,17 @@ body {
   justify-content: space-around;
   align-items: center;
 }
-.container {
-  width: 650px;
-  height: 380px;
-  /*border: solid gray;*/
-  background-image: url("/src/images/initial-img.png");
-  background-size: cover;
-  background-position: center;
+
+.logo-initial-page {
+  width: 500px;
 }
 
-
 h1 {
-  width: 400px;
+  width: 440px;
   font-size: 38px;
+
+  padding-left: 50px;
+  padding-right: 50px;
 }
 h2 {
   width: 400px;
@@ -69,21 +67,21 @@ h2 {
     flex-direction: column;
     align-items: center;
   }
-  .container {
-  width: 300px;
-  height: 1500px;
-  /*border: solid gray;*/
-  background-image: url("/src/images/initial-img.png");
-  background-size: cover;
-  background-position: center;
+  .logo-initial-page {
+  width: 250px;
 }
 h1 {
   width: 200px;
   font-size: 25px;
+
+  padding-left: 100px;
+  padding-right: 100px;
 }
 h2 {
   width: 200px;
   font-size: 18px;
+  padding-left: 100px;
+  padding-right: 100px;
 }
 
 }
