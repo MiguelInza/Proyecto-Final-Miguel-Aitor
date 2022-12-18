@@ -59,4 +59,14 @@ h1 {
 h2 {
   width: 400px;
 }
+
+@media (max-width: 667px) {
+
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 </style>

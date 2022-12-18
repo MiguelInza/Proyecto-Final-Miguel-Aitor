@@ -3,7 +3,7 @@
   <nav>
 
     <div class="img-logo2">
-<img class="logo" src="/src/images/logo2.png" alt="logo" width="140" />
+<img class="logo" src="/src/images/logo2.png" alt="logo" width="120" />
   </div>
     <div class="img-logo1">
 <img class="logo" src="/src/images/logo1.png" alt="logo" width="400" />
@@ -83,5 +83,18 @@ border-radius: 8px;
 
 background-color: rgb(34, 130, 130);
 cursor: pointer;
+}
+
+@media (max-width: 667px) {
+
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.img-logo {
+  width: 50%;
+}
+
 }
 </style>
