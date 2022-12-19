@@ -37,7 +37,7 @@ export default {
 body {
   background-color: rgb(206, 186, 224);
   border-radius: 30px;
-  height: 30px;
+ 
   height: 400px;
   display: flex;
   justify-content: space-around;

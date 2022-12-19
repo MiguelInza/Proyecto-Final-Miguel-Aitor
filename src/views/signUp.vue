@@ -1,11 +1,27 @@
 <template>
-  <div class="signup">
+  <body>
     <form @submit.prevent="signUp">
-      <input type="email" v-model="emailup" placeholder="Email" />
-      <input type="password" v-model="passwordup" placeholder="Password" />
-      <button class="button-sign-up" type="submit">Sign Up!</button>
+      <label> Email</label>
+      <div class="email-line">
+        <input type="email" v-model="emailup" placeholder="Email" required id="hole-email"/>
+      </div>
+      <label>Password</label>
+      <div class="password-line">
+        <input type="password" class="sin borde" v-model="passwordup" placeholder="Password" id="hole-password"/>
+      </div>
+<div class="btn-create-account">
+      <button class="create-account" type="submit">CREATE ACCOUNT</button>
+    </div>
     </form>
+<div class="text-already-account">
+    <p>
+      Already have an account?
+    </p>
+    <p> 
+      <button type="submit" @click="$router.push('/signIn')">Sign In</button>
+    </p>
   </div>
+  </body>
 </template>
 
 <script>
@@ -33,15 +49,70 @@ export default {
 </script>
 
 <style scoped>
-.signup {
-  display: flex;
-  justify-content: right;
+body {
   margin-top: 10px;
-  padding: 10px;
-  height: 600px;
-  background-color: bisque;
+
+  height: 400px;
+  background-color: rgb(185, 130, 233);
+  margin-top: 10px;
+  border-radius: 30px;
+  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.button-sign-up {
-  margin: 0 10px;
+.btn-create-account {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+
+.email-line {
+  margin-bottom: 20px;
+  font-size: 15px;
+
+}
+#hole-email {
+  border: none;
+  padding-left: 16px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  width: 300px;
+  background-color: rgb(228, 235, 240);
+  border-radius: 10px;
+}
+
+.password-line {
+  margin-bottom: 30px;
+  font-size: 15px;
+
+}
+#hole-password {
+  border: none;
+  padding-left: 16px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  width: 300px;
+  background-color: rgb(228, 235, 240);
+  border-radius: 10px;
+}
+.create-account {
+  margin-top: 30px;
+  font-size: 17px;
+  font-family: "Trebuchet MS", Verdana, sans-serif;
+  font-weight: bold;
+  padding: 10px 35px;
+  border-radius: 20px;
+  background-color: rgb(40, 203, 89);
+}
+.text-already-account{
+font-size: 16px;
+width: 250px;
+display: flex;
+justify-content: space-around;
+
+}
+
 </style>
