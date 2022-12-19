@@ -11,7 +11,7 @@
 <img class="logo-initial-page" src="/src/images/initial-img.png" alt="maind-img" />
     </div>
     <div>
-      <h1>Administra tus tareas con Rememer it.</h1>
+      <h1>Administra tus tareas con Remember it.</h1>
       <h2>
         La mejor forma de planificarte la semana con un click y sin esfuerzo.
       </h2>
