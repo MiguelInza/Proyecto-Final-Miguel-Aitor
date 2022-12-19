@@ -1,6 +1,8 @@
 <template>
 <div class="signout">
-  Sign Out
+  <form @submit.prevent="signOut">
+      <button class="button-sign-in" type="submit">Sign Out!</button>
+    </form>
 </div>
 </template>
 
@@ -15,6 +17,11 @@ export default {
       }
     },
 methods: {
+  signOut () {
+        this.userStore.signOut();
+        
+
+      }
 
 },
 computed: {

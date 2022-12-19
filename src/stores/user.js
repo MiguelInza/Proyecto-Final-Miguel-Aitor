@@ -43,6 +43,11 @@ export default defineStore("user", {
         this.$router.push("/Dashboard");
       }
     },
+    async signOut() {
+      const { error } = await supabase.auth.signOut();
+      if (error) throw error;
+      this.$router.push("/");
+    },
   },
   persist: {
     enabled: true,

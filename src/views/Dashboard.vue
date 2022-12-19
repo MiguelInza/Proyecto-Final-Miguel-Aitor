@@ -8,8 +8,12 @@
       <form @submit.prevent="newTask">
         <button>Add New Task</button>
         <input v-model="title" placeholder="write here!" />
-        <blog-post v-bind:status="1"></blog-post>
       </form>
+      <ul>
+        <to_do_list>
+        </to_do_list>
+      </ul>
+      <!--
       <ul>
         <li class="listado-tareas" v-for="task in tasksStore.tasks">
           {{ task.title }}
@@ -24,20 +28,20 @@
           </div>
         </li>
       </ul>
+      -->
     </section>
 
     <section id="sec2">
       <h2>In process</h2>
-      <form @submit.prevent="newTask">
+      <form @submit.prevent="newTask2">
         <button>Add New Task</button>
         <input v-model="title2" placeholder="write here!" />
-        <blog-post v-bind:status="2"></blog-post>
       </form>
       <ul>
-        <li class="listado-tareas" v-for="task in tasksStore.tasks">
-          {{ task.title2 }}
-          <div class="allButtons" v-if="status=2">
-            <form @submit.prevent="editTask(task.id, task.title2)">
+        <li v-if="status==2" class="listado-tareas" v-for="task in tasksStore.tasks">
+          {{ task.title2 }}  {{ task.status }}
+          <div class="allButtons" >
+            <form @submit.prevent="editTask2(task.id, task.title2)">
               <button @click="boton = !boton">Edit</button>
               <input v-if="boton" v-model="task.title2"/> 
             </form>
@@ -48,6 +52,7 @@
         </li>
       </ul>
     </section>
+
     <section id="sec3">
       <h2>Done</h2>
     </section>
@@ -58,6 +63,7 @@
 import { mapStores } from "pinia";
 import userStore from "../stores/user";
 import tasksStore from "../stores/tasks";
+import to_do_list from "../components/to_do_list.vue";
 
 export default {
   data() {
@@ -67,24 +73,42 @@ export default {
       title3: "",
       editTitle: "",
       todos: [],
-      status: 1,
+      status: null,
       boton: false,
     };
   },
+  components: {
+    to_do_list,
+  },
   methods: {
     newTask() {
+      this.status = 1;
       this.tasksStore.createTask(
         this.userStore.user.id,
         this.title,
         this.status
       );
       this.title = "";
+      
+    },
+    newTask2() {
+      this.status = 2;
+      this.tasksStore.createTask(
+        this.userStore.user.id,
+        this.title2,
+        this.status
+      );
+      this.title2 = "";
+      
     },
     removeTask(taskId) {
       this.tasksStore.deleteTask(taskId);
     },
     editTask(taskId, title) {
       this.tasksStore.updateTask(taskId, title);
+    },
+    editTask2(taskId, title2) {
+      this.tasksStore.updateTask(taskId, title2);
     },
   },
   computed: {
