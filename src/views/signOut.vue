@@ -1,9 +1,15 @@
 <template>
-<div class="signout">
+  <body>
+<div class="btn-signout">
   <form @submit.prevent="signOut">
-      <button class="button-sign-in" type="submit">Sign Out!</button>
+      <button class="button-sign-in" type="submit">Initial page</button>
     </form>
 </div>
+<div>
+
+
+</div>
+</body>
 </template>
 
 <script>
@@ -31,8 +37,22 @@ computed: {
 </script>
 
 <style scoped>
-.signout {
-  height: 600px;
-  background-color: bisque;
+body {
+  margin-top: 10px;
+
+height: 400px;
+background-color: rgb(177, 173, 236);
+margin-top: 10px;
+border-radius: 30px;
+font-size: 24px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
 }
+
+.logo-img-end{
+width: 600px
+}
+
 </style>

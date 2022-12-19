@@ -3,7 +3,7 @@
   <nav>
 
     <div>
-<img class="logo-emoji" src="/src/images/logo2.png" alt="logo" />
+<img class="logo-emoji" src="/src/images/logo-christmas.png" alt="logo" />
   </div>
     <div>
 <img class="logo-img-main" src="/src/images/logo1.png" alt="logo"  />
@@ -13,13 +13,13 @@
 
     <div class="buttons">
       <div class="button1">
-        <button type="submit" @click="$router.push('/signUp')">Sign Up</button>
+        <button type="submit" @click="$router.push('/signUp')">Registrarse</button>
       </div>
       <div class="button2">
-        <button type="submit" @click="$router.push('/signIn')">Sign In</button>
+        <button type="submit" @click="$router.push('/signIn')">Iniciar sesión</button>
       </div>
       <div class="button3">
-        <button type="submit" @click="$router.push('/signOut')">Log Out</button>
+        <button type="submit" @click="$router.push('/')">Salir</button>
       </div>
     </div>
   </nav> 
@@ -45,7 +45,7 @@ nav {
   background-color:rgb(186, 219, 197);
 }
 .logo-emoji {
-  width: 120px;
+  width: 150px;
 }
 .logo-img-main {
 width: 400px

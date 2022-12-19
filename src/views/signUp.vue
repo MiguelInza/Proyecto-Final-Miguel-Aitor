@@ -10,18 +10,18 @@
         <input type="password" class="sin borde" v-model="passwordup" placeholder="Password" id="hole-password"/>
       </div>
 <div class="btn-create-account">
-      <button class="create-account" type="submit">CREATE ACCOUNT</button>
+      <button class="create-account" type="submit">CREAR CUENTA</button>
     </div>
     </form>
 <div class="text-already-account">
   <div>
     <p>
-      Already have an account?
+      ¿Ya estás registrado?
     </p>
     </div>
     <div >
     
-      <button class="signIn-btn" type="submit" @click="$router.push('/signIn')">Sign In</button>
+      <button class="signIn-btn" type="submit" @click="$router.push('/signIn')">Inicia sesión</button>
   
   </div>
   </div>
@@ -81,6 +81,7 @@ body {
 
 }
 #hole-email {
+  margin-top: 8px;
   border: none;
   padding-left: 16px;
   padding-bottom: 10px;
@@ -96,6 +97,7 @@ body {
 
 }
 #hole-password {
+  margin-top: 8px;
   border: none;
   padding-left: 16px;
   padding-bottom: 10px;
@@ -115,8 +117,9 @@ body {
   cursor: pointer;
 }
 .text-already-account{
+  margin-top: 10px;
 font-size: 16px;
-width: 250px;
+width: 280px;
 display: flex;
 justify-content: space-around;
 align-items: center;

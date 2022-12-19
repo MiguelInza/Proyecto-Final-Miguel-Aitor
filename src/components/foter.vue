@@ -5,7 +5,7 @@
 <img class="logo-principal" src="/src/images/logo1.png" alt="logo" width="150" />
   </div>
   <div id="text-footer">
-  Siguenos por las redes:
+  Síguenos por las redes:
   </div>
   <div id="logos-redes">
   <img class="logo" src="/src/images/logo-fb.png" alt="logo" />
