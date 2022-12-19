@@ -14,12 +14,16 @@
     </div>
     </form>
 <div class="text-already-account">
+  <div>
     <p>
       Already have an account?
     </p>
-    <p> 
-      <button type="submit" @click="$router.push('/signIn')">Sign In</button>
-    </p>
+    </div>
+    <div >
+    
+      <button class="signIn-btn" type="submit" @click="$router.push('/signIn')">Sign In</button>
+  
+  </div>
   </div>
   </body>
 </template>
@@ -63,10 +67,12 @@ body {
   align-items: center;
 }
 .btn-create-account {
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
 }
 
 .email-line {
@@ -106,13 +112,21 @@ body {
   padding: 10px 35px;
   border-radius: 20px;
   background-color: rgb(40, 203, 89);
+  cursor: pointer;
 }
 .text-already-account{
 font-size: 16px;
 width: 250px;
 display: flex;
 justify-content: space-around;
+align-items: center;
 
+}
+.signIn-btn {
+  padding: 3px 14px;
+  background-color: rgb(167, 93, 231);
+  border-radius: 12px;
+  cursor: pointer;
 }
 
 </style>
