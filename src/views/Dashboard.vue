@@ -6,17 +6,17 @@
   <div id="div1">
     <section id="sec1">
       <h2>TO-DO list</h2>
-      <to_do_list> </to_do_list>
+      <to_do_list :estado=1> </to_do_list>
     </section>
 
     <section id="sec2">
       <h2>In process</h2>
-      <in_process> </in_process>
+      <to_do_list :estado=2> </to_do_list>
     </section>
 
     <section id="sec3">
       <h2>Done</h2>
-      <done> </done>
+      <to_do_list :estado=3> </to_do_list>
     </section>
   </div>
 </template>

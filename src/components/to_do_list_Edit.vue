@@ -1,22 +1,8 @@
 <template>
-  <form @submit.prevent="newTask2">
-    <button>Add New Task</button>
-    <input v-model="title2" placeholder="write here!" />
+  <form @submit.prevent="editTask(item.id, item.title)">
+    <button @click="boton = !boton">Edit</button>
+    <input v-if="boton" v-model="item.title" />
   </form>
-  <ul>
-    <li class="listado-tareas" v-for="task in tasksStore.pendingTasks">
-      {{ task.title }} {{ task.status }}
-      <div class="allButtons">
-        <form @submit.prevent="editTask2(task.id, task.title)">
-          <button @click="boton = !boton">Edit</button>
-          <input v-if="boton" v-model="task.title" />
-        </form>
-        <button @click="removeTask(task.id)">Remove</button>
-        <button @click="">In Process</button>
-        <button @click="">Done</button>
-      </div>
-    </li>
-  </ul>
 </template>
 
 <script>
@@ -25,6 +11,12 @@ import userStore from "../stores/user";
 import tasksStore from "../stores/tasks";
 
 export default {
+  props: {
+    item: {
+        type: Object,
+        required: false
+    },
+  },
   data() {
     return {
       title: "",
@@ -32,24 +24,24 @@ export default {
       title3: "",
       editTitle: "",
       todos: [],
-      status: 2,
+      status: 1,
       boton: false,
     };
   },
   methods: {
-    newTask2() {
-      this.status = 2;
+    newTask() {
+      this.status = 1;
       this.tasksStore.createTask(
         this.userStore.user.id,
-        this.title2,
+        this.title,
         this.status
       );
-      this.title2 = "";
+      this.title = "";
     },
     removeTask(taskId) {
       this.tasksStore.deleteTask(taskId);
     },
-    editTask2(taskId, title) {
+    editTask(taskId, title) {
       this.tasksStore.updateTask(taskId, title);
     },
   },

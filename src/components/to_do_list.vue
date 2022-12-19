@@ -3,28 +3,55 @@
     <button>Add New Task</button>
     <input v-model="title" placeholder="write here!" />
   </form>
-  <ul>
+  <ul v-if="this.estado==1">
     <li class="listado-tareas" v-for="task in tasksStore.doingTasks">
       {{ task.title }} {{ task.status }}
       <div class="allButtons">
-        <form @submit.prevent="editTask(task.id, task.title)">
-          <button @click="boton = !boton">Edit</button>
-          <input v-if="boton" v-model="task.title" />
-        </form>
+        <to_do_list_Edit :item="task"></to_do_list_Edit>
         <button @click="removeTask(task.id)">Remove</button>
         <button @click="">In Process</button>
         <button @click="">Done</button>
       </div>
     </li>
   </ul>
+  <ul v-else-if="this.estado==2">
+    <li class="listado-tareas" v-for="task in tasksStore.pendingTasks">
+      {{ task.title }} {{ task.status }}
+      <div class="allButtons">
+        <to_do_list_Edit :item="task"></to_do_list_Edit>
+        <button @click="removeTask(task.id)">Remove</button>
+        <button @click="">In Process</button>
+        <button @click="">Done</button>
+      </div>
+    </li>
+  </ul>
+  <ul v-else-if="this.estado==3">
+    <li class="listado-tareas" v-for="task in tasksStore.doneTasks">
+      {{ task.title }} {{ task.status }}
+      <div class="allButtons">
+        <to_do_list_Edit :item="task"></to_do_list_Edit>
+        <button @click="removeTask(task.id)">Remove</button>
+        <button @click="">In Process</button>
+        <button @click="">Done</button>
+      </div>
+    </li>
+  </ul>
+  
 </template>
 
 <script>
 import { mapStores } from "pinia";
 import userStore from "../stores/user";
 import tasksStore from "../stores/tasks";
+import to_do_list_Edit from "../components/to_do_list_Edit.vue";
 
 export default {
+  props: {
+    estado: {
+        type: Number,
+        required: false
+    },
+  },
   data() {
     return {
       title: "",
@@ -32,13 +59,16 @@ export default {
       title3: "",
       editTitle: "",
       todos: [],
-      status: 1,
+      status: null,
       boton: false,
     };
   },
+  components: {
+    to_do_list_Edit,
+  },
   methods: {
     newTask() {
-      this.status = 1;
+      this.status = this.estado;
       this.tasksStore.createTask(
         this.userStore.user.id,
         this.title,
