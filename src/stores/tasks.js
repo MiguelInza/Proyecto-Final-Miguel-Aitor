@@ -10,7 +10,7 @@ export default defineStore("tasks", {
       title: "",
       title2: "",
       title3: "",
-      status: 1,
+      status: null,
     };
   },
   getters: {
@@ -61,6 +61,30 @@ export default defineStore("tasks", {
         .update({ title: title, })
         .eq('id', taskId)
         this.fetchTasks()
-    }
+    },
+    async Empezando(taskId, status) {
+      status=1
+      const { error } = await supabase
+        .from('tasks')
+        .update({ status: status, })
+        .eq('id', taskId)
+        this.fetchTasks()
+    },
+    async Trabajando(taskId, status) {
+      status=2
+      const { error } = await supabase
+        .from('tasks')
+        .update({ status: status, })
+        .eq('id', taskId)
+        this.fetchTasks()
+    },
+    async Terminado(taskId, status) {
+      status=3
+      const { error } = await supabase
+        .from('tasks')
+        .update({ status: status, })
+        .eq('id', taskId)
+        this.fetchTasks()
+    },
   },
 });

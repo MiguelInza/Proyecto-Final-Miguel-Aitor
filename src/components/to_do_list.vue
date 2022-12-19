@@ -5,34 +5,34 @@
   </form>
   <ul v-if="this.estado==1">
     <li class="listado-tareas" v-for="task in tasksStore.doingTasks">
-      {{ task.title }} {{ task.status }}
+      {{ task.title }} 
       <div class="allButtons">
         <to_do_list_Edit :item="task"></to_do_list_Edit>
         <button @click="removeTask(task.id)">Borrar</button>
-        <button @click="">Trabajando</button>
-        <button @click="">Terminado</button>
+        <button @click="Trabajando(task.id, task.status)">Trabajando</button>
+        <button @click="Terminado(task.id, task.status)">Terminado</button>
       </div>
     </li>
   </ul>
   <ul v-else-if="this.estado==2">
     <li class="listado-tareas" v-for="task in tasksStore.pendingTasks">
-      {{ task.title }} {{ task.status }}
+      {{ task.title }} 
       <div class="allButtons">
         <to_do_list_Edit :item="task"></to_do_list_Edit>
         <button @click="removeTask(task.id)">Borrar</button>
-        <button @click="">Empezando</button>
-        <button @click="">Terminado</button>
+        <button @click="Empezando(task.id, task.status)">Empezando</button>
+        <button @click="Terminado(task.id, task.status)">Terminado</button>
       </div>
     </li>
   </ul>
   <ul v-else-if="this.estado==3">
     <li class="listado-tareas" v-for="task in tasksStore.doneTasks">
-      {{ task.title }} {{ task.status }}
+      {{ task.title }} 
       <div class="allButtons">
         <to_do_list_Edit :item="task"></to_do_list_Edit>
         <button @click="removeTask(task.id)">Borrar</button>
-        <button @click="">Empezando</button>
-        <button @click="">Trabajando</button>
+        <button @click="Empezando(task.id, task.status)">Empezando</button>
+        <button @click="Trabajando(task.id, task.status)">Trabajando</button>
       </div>
     </li>
   </ul>
@@ -81,6 +81,15 @@ export default {
     },
     editTask(taskId, title) {
       this.tasksStore.updateTask(taskId, title);
+    },
+    Empezando(taskId, status) {
+      this.tasksStore.Empezando(taskId, status);
+    },
+    Trabajando(taskId, status) {
+      this.tasksStore.Trabajando(taskId, status);
+    },
+    Terminado(taskId, status) {
+      this.tasksStore.Terminado(taskId, status);
     },
   },
   computed: {
