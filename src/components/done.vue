@@ -1,22 +1,5 @@
 <template>
-  <form @submit.prevent="newTask3">
-    <button>Add New Task</button>
-    <input v-model="title3" placeholder="write here!" />
-  </form>
-  <ul>
-    <li class="listado-tareas" v-for="task in tasksStore.doneTasks">
-      {{ task.title }} {{ task.status }}
-      <div class="allButtons">
-        <form @submit.prevent="editTask3(task.id, task.title)">
-          <button @click="boton = !boton">Edit</button>
-          <input v-if="boton" v-model="task.title" />
-        </form>
-        <button @click="removeTask(task.id)">Remove</button>
-        <button @click="">In Process</button>
-        <button @click="">Done</button>
-      </div>
-    </li>
-  </ul>
+
 </template>
 
 <script>

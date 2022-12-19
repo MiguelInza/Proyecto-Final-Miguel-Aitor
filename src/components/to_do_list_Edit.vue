@@ -1,6 +1,6 @@
 <template>
   <form @submit.prevent="editTask(item.id, item.title)">
-    <button @click="boton = !boton">Edit</button>
+    <button @click="boton = !boton">Editar</button>
     <input v-if="boton" v-model="item.title" />
   </form>
 </template>

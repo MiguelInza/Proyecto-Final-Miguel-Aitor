@@ -1,16 +1,16 @@
 <template>
   <form @submit.prevent="newTask">
-    <button>Add New Task</button>
-    <input v-model="title" placeholder="write here!" />
+    <button>Nueva tarea</button>
+    <input v-model="title" placeholder="añadir" />
   </form>
   <ul v-if="this.estado==1">
     <li class="listado-tareas" v-for="task in tasksStore.doingTasks">
       {{ task.title }} {{ task.status }}
       <div class="allButtons">
         <to_do_list_Edit :item="task"></to_do_list_Edit>
-        <button @click="removeTask(task.id)">Remove</button>
-        <button @click="">In Process</button>
-        <button @click="">Done</button>
+        <button @click="removeTask(task.id)">Borrar</button>
+        <button @click="">Trabajando</button>
+        <button @click="">Terminado</button>
       </div>
     </li>
   </ul>
@@ -19,9 +19,9 @@
       {{ task.title }} {{ task.status }}
       <div class="allButtons">
         <to_do_list_Edit :item="task"></to_do_list_Edit>
-        <button @click="removeTask(task.id)">Remove</button>
-        <button @click="">In Process</button>
-        <button @click="">Done</button>
+        <button @click="removeTask(task.id)">Borrar</button>
+        <button @click="">Empezando</button>
+        <button @click="">Terminado</button>
       </div>
     </li>
   </ul>
@@ -30,9 +30,9 @@
       {{ task.title }} {{ task.status }}
       <div class="allButtons">
         <to_do_list_Edit :item="task"></to_do_list_Edit>
-        <button @click="removeTask(task.id)">Remove</button>
-        <button @click="">In Process</button>
-        <button @click="">Done</button>
+        <button @click="removeTask(task.id)">Borrar</button>
+        <button @click="">Empezando</button>
+        <button @click="">Trabajando</button>
       </div>
     </li>
   </ul>

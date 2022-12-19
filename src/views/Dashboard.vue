@@ -1,21 +1,21 @@
 <template>
   <header>
-    <h1>Our tasks</h1>
+    <h1>Listado de tareas</h1>
   </header>
 
   <div id="div1">
     <section id="sec1">
-      <h2>TO-DO list</h2>
+      <h2>Empezando</h2>
       <to_do_list :estado=1> </to_do_list>
     </section>
 
     <section id="sec2">
-      <h2>In process</h2>
+      <h2>Trabajando</h2>
       <to_do_list :estado=2> </to_do_list>
     </section>
 
     <section id="sec3">
-      <h2>Done</h2>
+      <h2>Terminado</h2>
       <to_do_list :estado=3> </to_do_list>
     </section>
   </div>
