@@ -5,11 +5,30 @@ import { supabase } from "../supabase";
 export default defineStore("tasks", {
   state() {
     return {
-      tasks: null,
+      tasks: [],
       user_id: "",
       title: "",
+      title2: "",
+      title3: "",
       status: 1,
     };
+  },
+  getters: {
+    doingTasks() {
+      return this.tasks.filter(function (task) {
+        return task.status === 1;
+       });
+    },
+    pendingTasks() {
+      return this.tasks.filter(function (task) {
+        return task.status === 2;
+       });
+    },
+    doneTasks() {
+      return this.tasks.filter(function (task) {
+        return task.status === 3;
+       });
+    },
   },
   actions: {
     async fetchTasks() {

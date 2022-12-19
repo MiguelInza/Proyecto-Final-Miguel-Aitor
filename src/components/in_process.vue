@@ -1,10 +1,10 @@
 <template>
-        <li class="listado-tareas" v-for="task in tasksStore.doingTasks">
-          {{ task.title }} {{ task.status }}
+        <li class="listado-tareas" v-for="task in tasksStore.pendingTasks">
+          {{ task.title }}  {{ task.status }}
           <div class="allButtons" >
-            <form @submit.prevent="editTask(task.id, task.title)">
+            <form @submit.prevent="editTask2(task.id, task.title2)">
               <button @click="boton = !boton">Edit</button>
-              <input v-if="boton" v-model="task.title"/> 
+              <input v-if="boton" v-model="task.title2"/> 
             </form>
             <button @click="removeTask(task.id)">Remove</button>
             <button @click="">In Process</button>
@@ -27,7 +27,7 @@ export default {
       title3: "",
       editTitle: "",
       todos: [],
-      status: 1,
+      status: 2,
       boton: false,
     };
   },
