@@ -9,9 +9,9 @@
             <button @click="removeTask(task.id)">Remove</button>
             <button @click="">In Process</button>
             <button @click="">Done</button>
+
           </div>
         </li>
-  
 </template>
 
 <script>
@@ -63,4 +63,7 @@ export default {
   justify-content: space-around;
   padding: 8px;
 }
+
+
+
 </style>
