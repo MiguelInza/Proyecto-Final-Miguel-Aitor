@@ -1,7 +1,20 @@
 <template>
-  <div id="footer">
-    Soy el footer
+
+  <footer>
+    <div>
+<img class="logo-principal" src="/src/images/logo1.png" alt="logo" width="150" />
   </div>
+  <div id="text-footer">
+  Siguenos por las redes sociales:
+  </div>
+  <div id="logos-redes">
+  <img class="logo" src="/src/images/logo-fb.png" alt="logo" />
+  <img class="logo" src="/src/images/logo-tweet.png" alt="logo"  />
+  <img class="logo" src="/src/images/logo-linked.png" alt="logo"  />
+  <img class="logo" src="/src/images/logo-yout.png" alt="logo"  />
+  <img class="logo" src="/src/images/logo-insta.png" alt="logo"  />
+</div>
+</footer>
 </template>
 
 <script>
@@ -13,8 +26,61 @@ export default {
 </script>
 
 <style scoped>
-#footer {
-  background-color: rgb(234, 196, 146);
-  padding: 10px;
+footer {
+  padding: 0px 40px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 30px;
+  background-color:rgb(186, 219, 197);
+  margin-top: 10px;
+  padding: 20px;
 }
+
+#text-footer {
+  font-size: 20px;
+  font-family: "Trebuchet MS", Verdana, sans-serif;
+  font-weight: bold;
+}
+
+.logo{
+  width: 28px;
+  height: 28px;
+}
+#logos-redes {
+  width: 500px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  object-fit: cover;
+}
+@media (max-width: 667px) {
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-principal {
+width: 120px;
+margin-bottom: 10px;
+}
+.logo{
+  margin-top: 10px;
+  width: 22px;
+  height: 22px;
+}
+#text-footer {
+  font-size: 15px;
+ 
+  
+}
+
+#logos-redes {
+  width: 300px;
+
+}
+}
+
 </style>
