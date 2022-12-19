@@ -2,41 +2,21 @@
   <header>
     <h1>Our tasks</h1>
   </header>
+
   <div id="div1">
     <section id="sec1">
       <h2>TO-DO list</h2>
-      <form @submit.prevent="newTask">
-        <button>Add New Task</button>
-        <input v-model="title" placeholder="write here!" />
-      </form>
-      <ul>
-        <to_do_list>
-        </to_do_list>
-      </ul>
+      <to_do_list> </to_do_list>
     </section>
 
     <section id="sec2">
       <h2>In process</h2>
-      <form @submit.prevent="newTask2">
-        <button>Add New Task</button>
-        <input v-model="title2" placeholder="write here!" />
-      </form>
-      <ul>
-        <in_process>
-        </in_process>
-      </ul>
+      <in_process> </in_process>
     </section>
 
     <section id="sec3">
       <h2>Done</h2>
-      <form @submit.prevent="newTask3">
-        <button>Add New Task</button>
-        <input v-model="title3" placeholder="write here!" />
-      </form>
-      <ul>
-        <done>
-        </done>
-      </ul>
+      <done> </done>
     </section>
   </div>
 </template>

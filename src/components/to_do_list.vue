@@ -1,17 +1,22 @@
 <template>
-        <li class="listado-tareas" v-for="task in tasksStore.doingTasks">
-          {{ task.title }} {{ task.status }}
-          <div class="allButtons" >
-            <form @submit.prevent="editTask(task.id, task.title)">
-              <button @click="boton = !boton">Edit</button>
-              <input v-if="boton" v-model="task.title"/> 
-            </form>
-            <button @click="removeTask(task.id)">Remove</button>
-            <button @click="">In Process</button>
-            <button @click="">Done</button>
-
-          </div>
-        </li>
+  <form @submit.prevent="newTask">
+    <button>Add New Task</button>
+    <input v-model="title" placeholder="write here!" />
+  </form>
+  <ul>
+    <li class="listado-tareas" v-for="task in tasksStore.doingTasks">
+      {{ task.title }} {{ task.status }}
+      <div class="allButtons">
+        <form @submit.prevent="editTask(task.id, task.title)">
+          <button @click="boton = !boton">Edit</button>
+          <input v-if="boton" v-model="task.title" />
+        </form>
+        <button @click="removeTask(task.id)">Remove</button>
+        <button @click="">In Process</button>
+        <button @click="">Done</button>
+      </div>
+    </li>
+  </ul>
 </template>
 
 <script>
@@ -32,6 +37,15 @@ export default {
     };
   },
   methods: {
+    newTask() {
+      this.status = 1;
+      this.tasksStore.createTask(
+        this.userStore.user.id,
+        this.title,
+        this.status
+      );
+      this.title = "";
+    },
     removeTask(taskId) {
       this.tasksStore.deleteTask(taskId);
     },
@@ -63,7 +77,4 @@ export default {
   justify-content: space-around;
   padding: 8px;
 }
-
-
-
 </style>
