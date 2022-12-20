@@ -93,7 +93,7 @@ background-color: rgb(34, 130, 130);
 cursor: pointer;
 }
 
-@media (max-width: 667px) {
+@media (max-width: 780px) {
 
 nav {
   display: flex;

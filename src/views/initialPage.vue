@@ -35,7 +35,7 @@ export default {
 
 <style scoped>
 body {
-  background-color: rgb(206, 186, 224);
+  background-color: rgb(161, 152, 231);
   border-radius: 30px;
  
   height: 400px;
@@ -51,6 +51,7 @@ body {
 h1 {
   width: 440px;
   font-size: 38px;
+  font-family: fantasy;
 
   padding-left: 50px;
   padding-right: 50px;
@@ -58,6 +59,8 @@ h1 {
 h2 {
   width: 400px;
   font-size: 26px;
+  font-family: fantasy;
+  font-style: italic;
 }
 
 @media (max-width: 1180px) {
