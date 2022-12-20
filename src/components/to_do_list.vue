@@ -3,8 +3,8 @@
     <button class="btn-nueva-tarea">Nueva tarea</button>
     <input v-model="title" placeholder="añadir" />
   </form>
-  <ul v-if="this.estado==1">
-    <li class="listado-tareas" v-for="task in tasksStore.doingTasks">
+  <ul class="marg-list-1" v-if="this.estado==1">
+    <li class="listado-tareas-1" v-for="task in tasksStore.doingTasks">
       {{ task.title }} 
       <div class="allButtons">
         <to_do_list_Edit :item="task"></to_do_list_Edit>
@@ -14,8 +14,8 @@
       </div>
     </li>
   </ul>
-  <ul v-else-if="this.estado==2">
-    <li class="listado-tareas" v-for="task in tasksStore.pendingTasks">
+  <ul class="marg-list-2" v-else-if="this.estado==2">
+    <li class="listado-tareas-2" v-for="task in tasksStore.pendingTasks">
       {{ task.title }} 
       <div class="allButtons">
         <to_do_list_Edit :item="task"></to_do_list_Edit>
@@ -25,8 +25,8 @@
       </div>
     </li>
   </ul>
-  <ul v-else-if="this.estado==3">
-    <li class="listado-tareas" v-for="task in tasksStore.doneTasks">
+  <ul class="marg-list-3" v-else-if="this.estado==3">
+    <li class="listado-tareas-3" v-for="task in tasksStore.doneTasks">
       {{ task.title }} 
       <div class="allButtons">
         <to_do_list_Edit :item="task"></to_do_list_Edit>
@@ -103,23 +103,58 @@ export default {
 </script>
 
 <style scoped>
+
+.marg-list-1 {
+  margin-left: -17px;
+  margin-right: 9px;
+}
+.marg-list-2 {
+  margin-left: -17px;
+  margin-right: 9px;
+}
+.marg-list-3 {
+  margin-left: -17px;
+  margin-right: 9px;
+}
+
 .btn-nueva-tarea {
   margin-left: 8px;
   margin-right: 8px;
-  background-color: rgb(50, 164, 27);
+  background-color: rgb(56, 64, 163);
   color: white;
   padding: 5px 10px;
   border-radius: 14px;
   font-weight: bolder;
 }
-.listado-tareas {
+.listado-tareas-1 {
 
   word-wrap: break-word;
   background-color: rgb(87, 195, 195);
-  margin: 4px;
-  border-radius: 7px;
+  margin: 6px 0px;
+  border-radius: 12px;
   list-style: none;
   padding: 10px;
+
+}
+.listado-tareas-2 {
+
+word-wrap: break-word;
+background-color: rgb(87, 195, 195);
+margin: 6px 0px;
+border-radius: 12px;
+list-style: none;
+padding: 10px;
+
+}
+.listado-tareas-3 {
+
+word-wrap: break-word;
+background-color: rgb(87, 195, 195);
+margin: 6px 0px;
+border-radius: 12px;
+list-style: none;
+padding: 10px;
+
 }
 .allButtons {
   display: flex;

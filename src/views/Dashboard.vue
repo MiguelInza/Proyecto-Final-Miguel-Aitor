@@ -120,13 +120,8 @@ export default {
 header {
   background-color: rgb(172, 172, 225);
   /*width: 90vw;*/
-  font-family: fantasy;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 15px;
-  margin-bottom: 15px;
+
   border-radius: 15px;
 
 }
@@ -134,6 +129,14 @@ header {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+}
+h1 {
+
+  display: flex;
+ align-items: center;
+ justify-content: center;
+
+  height: 60px;
 }
 h2 {
   text-align: center;
