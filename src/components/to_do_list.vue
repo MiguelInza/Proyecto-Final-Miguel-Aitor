@@ -20,7 +20,7 @@
       <div class="allButtons">
         <to_do_list_Edit :item="task"></to_do_list_Edit>
         <button class="btn-1" @click="removeTask(task.id)">Borrar</button>
-        <button class="btn-2" @click="Empezando(task.id, task.status)">Empezando</button>
+        <button class="btn-2" @click="Empezando(task.id, task.status)">Iniciar</button>
         <button class="btn-3" @click="Terminado(task.id, task.status)">Terminado</button>
       </div>
     </li>
@@ -31,7 +31,7 @@
       <div class="allButtons">
         <to_do_list_Edit :item="task"></to_do_list_Edit>
         <button class="btn-1" @click="removeTask(task.id)">Borrar</button>
-        <button class="btn-2" @click="Empezando(task.id, task.status)">Empezando</button>
+        <button class="btn-2" @click="Empezando(task.id, task.status)">Iniciar</button>
         <button class="btn-3" @click="Trabajando(task.id, task.status)">Trabajando</button>
       </div>
     </li>
@@ -107,6 +107,7 @@ export default {
 .marg-list-1 {
   margin-left: -17px;
   margin-right: 9px;
+ 
 }
 .marg-list-2 {
   margin-left: -17px;
@@ -135,7 +136,9 @@ export default {
   border-radius: 12px;
   list-style: none;
   padding: 10px;
-
+  border-width: 1px;
+   border-style: solid;
+   box-shadow: 3px 3px 1px;
 }
 .listado-tareas-2 {
 
@@ -145,7 +148,9 @@ margin: 6px 0px;
 border-radius: 12px;
 list-style: none;
 padding: 10px;
-
+border-width: 1px;
+   border-style: solid;
+   box-shadow: 3px 3px 1px;
 }
 .listado-tareas-3 {
 
@@ -155,7 +160,9 @@ margin: 6px 0px;
 border-radius: 12px;
 list-style: none;
 padding: 10px;
-
+border-width: 1px;
+   border-style: solid;
+   box-shadow: 3px 3px 1px;
 }
 .allButtons {
   display: flex;

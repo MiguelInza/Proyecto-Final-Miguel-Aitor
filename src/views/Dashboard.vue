@@ -5,7 +5,7 @@
 
   <div id="div1">
     <section id="sec1">
-      <h2>Empezando</h2>
+      <h2>Iniciar</h2>
       <to_do_list :estado=1> </to_do_list>
     </section>
 
@@ -139,6 +139,10 @@ h1 {
  align-items: center;
  justify-content: center;
   height: 60px;
+  vertical-align: middle;
+  font-variant: small-caps;
+  letter-spacing: 3px;
+  text-shadow: 3px 2px 3px rgb(118, 118, 175);
 }
 h2 {
   text-align: center;
@@ -151,6 +155,7 @@ h2 {
   /*height: 600px;*/
   margin: 10px;
   border-radius: 20px;
+  box-shadow: 3px 3px 1px;
 }
 #sec2 {
   background-color: rgb(240, 240, 131);
@@ -159,6 +164,7 @@ h2 {
   /*height: 170px;*/
   margin: 10px;
   border-radius: 20px;
+  box-shadow: 3px 3px 1px;
 }
 #sec3 {
   background-color: rgb(122, 223, 122);
@@ -167,5 +173,6 @@ h2 {
   /*height: 170px;*/
   margin: 10px;
   border-radius: 20px;
+  box-shadow: 3px 3px 1px;
 }
 </style>
