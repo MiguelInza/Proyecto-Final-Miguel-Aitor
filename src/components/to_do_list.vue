@@ -1,6 +1,6 @@
 <template>
   <form @submit.prevent="newTask">
-    <button>Nueva tarea</button>
+    <button class="btn-nueva-tarea">Nueva tarea</button>
     <input v-model="title" placeholder="añadir" />
   </form>
   <ul v-if="this.estado==1">
@@ -8,9 +8,9 @@
       {{ task.title }} 
       <div class="allButtons">
         <to_do_list_Edit :item="task"></to_do_list_Edit>
-        <button @click="removeTask(task.id)">Borrar</button>
-        <button @click="Trabajando(task.id, task.status)">Trabajando</button>
-        <button @click="Terminado(task.id, task.status)">Terminado</button>
+        <button class="btn-1" @click="removeTask(task.id)">Borrar</button>
+        <button class="btn-2" @click="Trabajando(task.id, task.status)">Trabajando</button>
+        <button class="btn-3" @click="Terminado(task.id, task.status)">Terminado</button>
       </div>
     </li>
   </ul>
@@ -19,9 +19,9 @@
       {{ task.title }} 
       <div class="allButtons">
         <to_do_list_Edit :item="task"></to_do_list_Edit>
-        <button @click="removeTask(task.id)">Borrar</button>
-        <button @click="Empezando(task.id, task.status)">Empezando</button>
-        <button @click="Terminado(task.id, task.status)">Terminado</button>
+        <button class="btn-1" @click="removeTask(task.id)">Borrar</button>
+        <button class="btn-2" @click="Empezando(task.id, task.status)">Empezando</button>
+        <button class="btn-3" @click="Terminado(task.id, task.status)">Terminado</button>
       </div>
     </li>
   </ul>
@@ -30,9 +30,9 @@
       {{ task.title }} 
       <div class="allButtons">
         <to_do_list_Edit :item="task"></to_do_list_Edit>
-        <button @click="removeTask(task.id)">Borrar</button>
-        <button @click="Empezando(task.id, task.status)">Empezando</button>
-        <button @click="Trabajando(task.id, task.status)">Trabajando</button>
+        <button class="btn-1" @click="removeTask(task.id)">Borrar</button>
+        <button class="btn-2" @click="Empezando(task.id, task.status)">Empezando</button>
+        <button class="btn-3" @click="Trabajando(task.id, task.status)">Trabajando</button>
       </div>
     </li>
   </ul>
@@ -103,7 +103,17 @@ export default {
 </script>
 
 <style scoped>
+.btn-nueva-tarea {
+  margin-left: 8px;
+  margin-right: 8px;
+  background-color: rgb(50, 164, 27);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 14px;
+  font-weight: bolder;
+}
 .listado-tareas {
+
   word-wrap: break-word;
   background-color: rgb(87, 195, 195);
   margin: 4px;
@@ -115,5 +125,34 @@ export default {
   display: flex;
   justify-content: space-around;
   padding: 8px;
+
+}
+
+.btn-1 {
+  margin-left: 4px;
+  margin-right: 4px;
+  background-color: rgb(216, 66, 6);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 14px;
+  font-size: 12px;
+}
+.btn-2 {
+  margin-left: 4px;
+  margin-right: 4px;
+  background-color: rgb(138, 92, 143);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 14px;
+  font-size: 12px;
+}
+.btn-3 {
+  margin-left: 4px;
+  margin-right: 4px;
+  background-color: rgb(138, 92, 143);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 14px;
+    font-size: 12px;
 }
 </style>

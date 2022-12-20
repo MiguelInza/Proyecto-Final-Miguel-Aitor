@@ -88,6 +88,7 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 450px;
   }
   .logo-initial-page {
   width: 250px;

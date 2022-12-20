@@ -120,11 +120,15 @@ export default {
 header {
   background-color: rgb(172, 172, 225);
   /*width: 90vw;*/
-  height: 70px;
+  font-family: fantasy;
+
   display: flex;
   justify-content: center;
-  margin: 20px;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
   border-radius: 15px;
+
 }
 #div1 {
   display: flex;

@@ -65,7 +65,7 @@ footer {
 }
 
 }
-@media (max-width: 667px) {
+@media (max-width: 700px) {
 
 footer {
   display: flex;

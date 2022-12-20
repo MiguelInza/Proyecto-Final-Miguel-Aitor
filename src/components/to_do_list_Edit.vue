@@ -1,6 +1,6 @@
 <template>
   <form @submit.prevent="editTask(item.id, item.title)">
-    <button @click="boton = !boton">Editar</button>
+    <button class="btn-edit" @click="boton = !boton">Editar</button>
     <input v-if="boton" v-model="item.title" />
   </form>
 </template>
@@ -68,5 +68,15 @@ export default {
   display: flex;
   justify-content: space-around;
   padding: 8px;
+}
+
+.btn-edit {
+  margin-left: 4px;
+  margin-right: 4px;
+  background-color: rgb(32, 100, 100);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 14px;
+  font-size: 12px;
 }
 </style>
