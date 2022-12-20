@@ -101,6 +101,7 @@ export default {
   margin-right: 10px;
   padding: 8px 8px;
   border-radius: 5px;
+ 
 }
 .listado-tareas {
   word-wrap: break-word;
@@ -109,12 +110,14 @@ export default {
   border-radius: 7px;
   list-style: none;
   padding: 10px;
+
 }
 
 .allButtons {
   display: flex;
   justify-content: space-around;
   padding: 8px;
+
 }
 
 header {
@@ -135,11 +138,11 @@ h1 {
   display: flex;
  align-items: center;
  justify-content: center;
-
   height: 60px;
 }
 h2 {
   text-align: center;
+
 }
 #sec1 {
   background-color: rgb(207, 43, 70);

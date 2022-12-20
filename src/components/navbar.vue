@@ -36,6 +36,7 @@ export default {
 
 <style scoped>
 nav {
+  margin-top: 18px;
   height: 175px;
   padding: 0px 40px;
 

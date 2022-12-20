@@ -125,6 +125,7 @@ export default {
   padding: 5px 10px;
   border-radius: 14px;
   font-weight: bolder;
+  cursor: pointer;
 }
 .listado-tareas-1 {
 
@@ -171,6 +172,7 @@ padding: 10px;
   padding: 5px 10px;
   border-radius: 14px;
   font-size: 12px;
+  cursor: pointer;
 }
 .btn-2 {
   margin-left: 4px;
@@ -180,6 +182,7 @@ padding: 10px;
   padding: 5px 10px;
   border-radius: 14px;
   font-size: 12px;
+  cursor: pointer;
 }
 .btn-3 {
   margin-left: 4px;
@@ -189,5 +192,6 @@ padding: 10px;
   padding: 5px 10px;
   border-radius: 14px;
     font-size: 12px;
+    cursor: pointer;
 }
 </style>
