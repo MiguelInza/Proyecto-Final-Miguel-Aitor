@@ -45,7 +45,7 @@ body {
 }
 
 .logo-initial-page {
-  width: 500px;
+  width: 575px;
 }
 
 h1 {
@@ -60,7 +60,26 @@ h2 {
   font-size: 26px;
 }
 
-@media (max-width: 667px) {
+@media (max-width: 1180px) {
+
+  .logo-initial-page {
+    width: 360px;
+  }
+  h1 {
+  width: 440px;
+  font-size: 34px;
+
+  padding-left: 50px;
+  padding-right: 50px;
+}
+h2 {
+  width: 400px;
+  font-size: 23px;
+}
+}
+
+
+@media (max-width: 1000px) {
 
   body {
     display: flex;

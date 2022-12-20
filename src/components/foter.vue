@@ -56,6 +56,15 @@ footer {
 
 
 }
+
+@media (max-width: 1000px) {
+  #text-footer {
+  font-size: 14px;
+ 
+  
+}
+
+}
 @media (max-width: 667px) {
 
 footer {
@@ -74,7 +83,8 @@ margin-bottom: 10px;
   height: 22px;
 }
 #text-footer {
-  font-size: 15px;
+  font-size: 14px;
+  margin-bottom: 8px;
  
   
 }
