@@ -1,11 +1,11 @@
 <template>
   <body>
     <form @submit.prevent="signUp">
-      <label> Email</label>
+      <label class="text-line1"> Email</label>
       <div class="email-line">
         <input type="email" v-model="emailup" placeholder="Email" required id="hole-email"/>
       </div>
-      <label>Password</label>
+      <label class="text-line2">Password</label>
       <div class="password-line">
         <input type="password" class="sin borde" v-model="passwordup" placeholder="Password" id="hole-password"/>
       </div>
@@ -53,18 +53,24 @@ export default {
 </script>
 
 <style scoped>
+
 body {
   margin-top: 10px;
 
   height: 400px;
   background-color: rgb(185, 130, 233);
-  margin-top: 10px;
   border-radius: 30px;
-  font-size: 24px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.text-line1 {
+  font-size: 28px;
+
+}
+.text-line2 {
+  font-size: 28px;
 }
 .btn-create-account {
 
@@ -77,8 +83,6 @@ body {
 
 .email-line {
   margin-bottom: 20px;
-  font-size: 15px;
-
 }
 #hole-email {
   margin-top: 8px;
@@ -89,13 +93,13 @@ body {
   width: 300px;
   background-color: rgb(228, 235, 240);
   border-radius: 10px;
+  
 }
 
 .password-line {
   margin-bottom: 30px;
-  font-size: 15px;
-
 }
+
 #hole-password {
   margin-top: 8px;
   border: none;
@@ -106,6 +110,7 @@ body {
   background-color: rgb(228, 235, 240);
   border-radius: 10px;
 }
+
 .create-account {
   margin-top: 30px;
   font-size: 17px;
@@ -132,4 +137,57 @@ align-items: center;
   cursor: pointer;
 }
 
+@media (max-width: 667px) {
+
+body {
+  height: 350px;
+}
+  .text-line1 {
+  font-size: 24px;
+
+}
+.text-line2 {
+  font-size: 24px;
+}
+.email-line {
+  margin-bottom: 15px;
+
+}
+
+#hole-email {
+  margin-top: 8px;
+  border: none;
+  padding-left: 12px;
+  padding-bottom: 8px;
+  padding-top: 8px;
+  width: 240px;
+  border-radius: 10px;
+}
+
+.password-line {
+  margin-bottom: 15px;
+  font-size: 10px;
+
+}
+#hole-password {
+  margin-top: 8px;
+  border: none;
+  padding-left: 12px;
+  padding-bottom: 8px;
+  padding-top: 8px;
+  width: 240px;
+  border-radius: 10px;
+}
+
+.create-account {
+  margin-top: 12px;
+  margin-top: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 8px 30px;
+  border-radius: 17px;
+
+
+}
+}
 </style>

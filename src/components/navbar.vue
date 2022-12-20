@@ -36,7 +36,9 @@ export default {
 
 <style scoped>
 nav {
+  height: 175px;
   padding: 0px 40px;
+
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -46,6 +48,7 @@ nav {
 }
 .logo-emoji {
   width: 150px;
+
 }
 .logo-img-main {
 width: 400px
@@ -96,10 +99,11 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 290px;
 }
 .logo-emoji {
   width: 80px;
-
+margin-top: 10px;
 }
 .logo-img-main {
 width: 240px;

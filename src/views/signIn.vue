@@ -1,21 +1,12 @@
-<!--<template>
-  <div class="signin">
-    <form @submit.prevent="signIn">
-      <input type="email" v-model="emailin" placeholder="Email" />
-      <input type="password" v-model="passwordin" placeholder="Password" />
-      <button class="button-sign-in" type="submit">Sign In!</button>
-    </form>
-  </div>
-</template>
--->
+
 <template>
   <body>
     <form @submit.prevent="signIn">
-      <label> Email</label>
+      <label class="text-line1"> Email</label>
       <div class="email-line">
         <input type="email" v-model="emailin" placeholder="Email" required id="hole-email"/>
       </div>
-      <label>Password</label>
+      <label class="text-line2">Password</label>
       <div class="password-line">
         <input type="password" class="sin borde" v-model="passwordin" placeholder="Password" id="hole-password"/>
       </div>
@@ -77,7 +68,7 @@ computed: {
 .button-sign-in {
   margin: 0 10px;
   padding: 0 9px;
-}
+}  background-color: rgb(197, 154, 236);
 */
 
 body {
@@ -85,13 +76,18 @@ body {
 
   height: 400px;
   background-color: rgb(197, 154, 236);
-  margin-top: 10px;
   border-radius: 30px;
-  font-size: 24px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.text-line1 {
+  font-size: 28px;
+
+}
+.text-line2 {
+  font-size: 28px;
 }
 .btn-create-account {
 
@@ -104,8 +100,6 @@ body {
 
 .email-line {
   margin-bottom: 20px;
-  font-size: 15px;
-
 }
 #hole-email {
   margin-top: 8px;
@@ -116,13 +110,13 @@ body {
   width: 300px;
   background-color: rgb(228, 235, 240);
   border-radius: 10px;
+  
 }
 
 .password-line {
   margin-bottom: 30px;
-  font-size: 15px;
-
 }
+
 #hole-password {
   margin-top: 8px;
   border: none;
@@ -133,6 +127,7 @@ body {
   background-color: rgb(228, 235, 240);
   border-radius: 10px;
 }
+
 .create-account {
   margin-top: 30px;
   font-size: 17px;
@@ -146,7 +141,7 @@ body {
 .text-already-account{
   margin-top: 10px;
 font-size: 16px;
-width: 270px;
+width: 280px;
 display: flex;
 justify-content: space-around;
 align-items: center;
@@ -157,6 +152,60 @@ align-items: center;
   background-color: rgb(167, 93, 231);
   border-radius: 12px;
   cursor: pointer;
+}
+
+@media (max-width: 667px) {
+
+body {
+  height: 350px;
+}
+  .text-line1 {
+  font-size: 24px;
+
+}
+.text-line2 {
+  font-size: 24px;
+}
+.email-line {
+  margin-bottom: 15px;
+
+}
+
+#hole-email {
+  margin-top: 8px;
+  border: none;
+  padding-left: 12px;
+  padding-bottom: 8px;
+  padding-top: 8px;
+  width: 240px;
+  border-radius: 10px;
+}
+
+.password-line {
+  margin-bottom: 15px;
+  font-size: 10px;
+
+}
+#hole-password {
+  margin-top: 8px;
+  border: none;
+  padding-left: 12px;
+  padding-bottom: 8px;
+  padding-top: 8px;
+  width: 240px;
+  border-radius: 10px;
+}
+
+.create-account {
+  margin-top: 12px;
+  margin-top: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 8px 30px;
+  border-radius: 17px;
+
+
+}
 }
 
 </style>
