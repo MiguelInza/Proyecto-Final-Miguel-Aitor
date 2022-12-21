@@ -120,7 +120,8 @@ export default {
 header {
   background-color: rgb(172, 172, 225);
   /*width: 90vw;*/
-margin-top: 100px;
+margin-top: 110px;
+
   border-radius: 15px;
 }
 #div1 {
@@ -129,6 +130,7 @@ margin-top: 100px;
   flex-wrap: wrap;
 }
 h1 {
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -170,5 +172,14 @@ h2 {
   border-radius: 20px;
   box-shadow: 3px 3px 1px;
   margin-bottom: 40px;
+}
+
+@media (max-width: 1000px) {
+  header {
+
+margin-top: 70px;
+
+
+}
 }
 </style>

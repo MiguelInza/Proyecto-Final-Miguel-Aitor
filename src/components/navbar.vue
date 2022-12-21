@@ -53,10 +53,11 @@ nav {
 .emoji-and-logo{
     display: flex;
 align-items: center;
+margin-left: 70px;
   }
 .logo-emoji {
   width: 100px;
-
+margin-left: 20px;
 }
 .logo-img-main {
   width: 280px;
@@ -101,7 +102,7 @@ align-items: center;
   cursor: pointer;
 }
 
-@media (max-width: 1015px) {
+@media (max-width: 1000px) {
 
 
   nav {
@@ -110,8 +111,12 @@ align-items: center;
     align-items: center;
     margin-right: 10px;
   }
+  .emoji-and-logo{
+
+margin-left: 20px;
+  }
   .logo-emoji {
-    margin: 0px 0px;
+    margin-left: 20px;
     width: 60px;
     margin-top: 5px;
 

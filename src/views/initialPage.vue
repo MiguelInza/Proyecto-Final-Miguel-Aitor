@@ -1,9 +1,6 @@
 <template>
   <body>
-    <!--  <div >
-        Soy la initialPage
-    </div>
--->
+
 <div class="container"> </div>
     
     
@@ -35,11 +32,11 @@ export default {
 
 <style scoped>
 body {
-  margin-top: 120px;
+  margin-top: 110px;
   background-color: rgb(161, 152, 231);
   border-radius: 30px;
  
-  height: 500px;
+  height: 510px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -86,11 +83,12 @@ h2 {
 @media (max-width: 1000px) {
 
   body {
-    margin-top: 120px;
+    height: 550px;
+    margin-top: 70px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 450px;
+   
   }
   .logo-initial-page {
   width: 250px;
