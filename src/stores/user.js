@@ -37,7 +37,10 @@ export default defineStore("user", {
         email: emailin,
         password: passwordin,
       });
-      if (error) throw error;
+      /*if (error) throw error;*/
+      if (error) {
+        alert("Email o Password incorrecto. Asegúrese de estar registrado.")
+      }
       if (data.user) {
         this.user = data.user;
         this.$router.push("/Dashboard");
