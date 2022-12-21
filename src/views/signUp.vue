@@ -1,5 +1,8 @@
 <template>
   <body>
+    <h1>
+      Registrarse
+    </h1>
     <form @submit.prevent="signUp">
       <label class="text-line1"> Email</label>
       <div class="email-line">
@@ -64,6 +67,10 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+h1 {
+  font-family: fantasy;
+  font-size: 34px;
 }
 .text-line1 {
   font-size: 28px;

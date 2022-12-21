@@ -77,7 +77,7 @@ margin-left: 20px;
   font-size: 11px;
   font-weight: bolder;
   border-radius: 10px;
-  background-color: rgb(134, 164, 164);
+  background-color: rgb(83, 186, 186);
   cursor: pointer;
 }
 .button2 button {
@@ -87,7 +87,7 @@ margin-left: 20px;
   font-size: 11px;
   font-weight: bolder;
   border-radius: 10px;
-  background-color: rgb(58, 165, 165);
+  background-color: rgb(64, 170, 170);
   cursor: pointer;
 }
 
@@ -98,7 +98,7 @@ margin-left: 20px;
   font-size: 11px;
   font-weight: bolder;
   border-radius: 10px;
-  background-color: rgb(34, 130, 130);
+  background-color: rgb(49, 151, 151);
   cursor: pointer;
 }
 

@@ -1,6 +1,9 @@
 
 <template>
   <body>
+   <h1>
+    Iniciar sesión
+   </h1>
     <form @submit.prevent="signIn">
       <label class="text-line1"> Email</label>
       <div class="email-line">
@@ -56,20 +59,7 @@ computed: {
 </script>
 
 <style scoped>
-/*
-.signin {
-  display: flex;
-  justify-content: right;
-  margin-top: 10px;
-  padding: 10px;
-  height: 600px;
-  background-color: bisque;
-}
-.button-sign-in {
-  margin: 0 10px;
-  padding: 0 9px;
-}  background-color: rgb(197, 154, 236);
-*/
+
 
 body {
   margin-top: 110px;
@@ -81,6 +71,11 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+h1 {
+  font-family: fantasy;
+  font-size: 34px;
 }
 .text-line1 {
   font-size: 28px;

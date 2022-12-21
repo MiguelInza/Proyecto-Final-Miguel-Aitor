@@ -50,6 +50,9 @@ footer {
 .logo{
   width: 22px;
   height: 22px;
+  float: left;
+  transition: all 0.5s ease;
+
 }
 #logos-redes {
   width: 400px;
