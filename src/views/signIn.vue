@@ -72,9 +72,9 @@ computed: {
 */
 
 body {
-  margin-top: 10px;
+  margin-top: 110px;
 
-  height: 400px;
+  height: 500px;
   background-color: rgb(197, 154, 236);
   border-radius: 30px;
   display: flex;
@@ -154,10 +154,12 @@ align-items: center;
   cursor: pointer;
 }
 
-@media (max-width: 667px) {
+@media (max-width: 1000px) {
 
-body {
-  height: 350px;
+  body {
+  height: 550px;
+    margin-top: 70px;
+
 }
   .text-line1 {
   font-size: 24px;
