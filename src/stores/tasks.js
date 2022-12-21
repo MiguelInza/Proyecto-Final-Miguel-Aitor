@@ -62,24 +62,7 @@ export default defineStore("tasks", {
         .eq('id', taskId)
         this.fetchTasks()
     },
-    async Empezando(taskId, status) {
-      status=1
-      const { error } = await supabase
-        .from('tasks')
-        .update({ status: status, })
-        .eq('id', taskId)
-        this.fetchTasks()
-    },
-    async Trabajando(taskId, status) {
-      status=2
-      const { error } = await supabase
-        .from('tasks')
-        .update({ status: status, })
-        .eq('id', taskId)
-        this.fetchTasks()
-    },
-    async Terminado(taskId, status) {
-      status=3
+    async Moviendo(taskId, status) {
       const { error } = await supabase
         .from('tasks')
         .update({ status: status, })

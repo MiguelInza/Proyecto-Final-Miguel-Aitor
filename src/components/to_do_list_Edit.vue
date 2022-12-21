@@ -1,7 +1,7 @@
 <template>
   <form @submit.prevent="editTask(item.id, item.title)">
     <button class="btn-edit" @click="boton = !boton">Editar</button>
-    <input v-if="boton" v-model="item.title" />
+    <input class="input" v-if="boton" v-model="item.title" />
   </form>
 </template>
 
@@ -56,23 +56,11 @@ export default {
 </script>
 
 <style scoped>
-.listado-tareas {
-  word-wrap: break-word;
-  background-color: rgb(87, 195, 195);
-  margin: 4px;
-  border-radius: 7px;
-  list-style: none;
-  padding: 10px;
+.input {
+  width:220px;
 }
-.allButtons {
-  display: flex;
-  justify-content: space-around;
-  padding: 8px;
-}
-
 .btn-edit {
-  margin-left: 4px;
-  margin-right: 4px;
+  margin: 4px;
   background-color: rgb(32, 100, 100);
   color: white;
   padding: 5px 10px;

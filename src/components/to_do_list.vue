@@ -3,40 +3,54 @@
     <button class="btn-nueva-tarea">Nueva tarea</button>
     <input v-model="title" placeholder="añadir" />
   </form>
-  <ul class="marg-list-1" v-if="this.estado==1">
-    <li class="listado-tareas-1" v-for="task in tasksStore.doingTasks">
-      {{ task.title }} 
+  <ul class="marg-list-1" v-if="this.estado == 1" @drop="onDrop($event, 1)"   @dragover.prevent
+  @dragenter.prevent>
+    <li class="listado-tareas-1" v-for="task in tasksStore.doingTasks" draggable="true" @dragstart="startDrag($event, task)">
+      {{ task.title }}
       <div class="allButtons">
         <to_do_list_Edit :item="task"></to_do_list_Edit>
         <button class="btn-1" @click="removeTask(task.id)">Borrar</button>
-        <button class="btn-2" @click="Trabajando(task.id, task.status)">Trabajando</button>
-        <button class="btn-3" @click="Terminado(task.id, task.status)">Terminado</button>
+        <button class="btn-2" @click="Moviendo(task.id, 2)">
+          Trabajando
+        </button>
+        <button class="btn-3" @click="Moviendo(task.id, 3)">
+          Terminado
+        </button>
       </div>
     </li>
   </ul>
-  <ul class="marg-list-2" v-else-if="this.estado==2">
-    <li class="listado-tareas-2" v-for="task in tasksStore.pendingTasks">
-      {{ task.title }} 
+  <ul class="marg-list-2" v-else-if="this.estado == 2" @drop="onDrop($event, 2)"   @dragover.prevent
+  @dragenter.prevent>
+    <li class="listado-tareas-2" v-for="task in tasksStore.pendingTasks" draggable="true" @dragstart="startDrag($event, task)">
+      {{ task.title }}
       <div class="allButtons">
         <to_do_list_Edit :item="task"></to_do_list_Edit>
         <button class="btn-1" @click="removeTask(task.id)">Borrar</button>
-        <button class="btn-2" @click="Empezando(task.id, task.status)">Iniciar</button>
-        <button class="btn-3" @click="Terminado(task.id, task.status)">Terminado</button>
+        <button class="btn-2" @click="Moviendo(task.id, 1)">
+          Iniciar
+        </button>
+        <button class="btn-3" @click="Moviendo(task.id, 3)">
+          Terminado
+        </button>
       </div>
     </li>
   </ul>
-  <ul class="marg-list-3" v-else-if="this.estado==3">
-    <li class="listado-tareas-3" v-for="task in tasksStore.doneTasks">
-      {{ task.title }} 
+  <ul class="marg-list-3" v-else-if="this.estado == 3" @drop="onDrop($event, 3)"   @dragover.prevent
+  @dragenter.prevent>
+    <li class="listado-tareas-3" v-for="task in tasksStore.doneTasks" draggable="true" @dragstart="startDrag($event, task)">
+      {{ task.title }}
       <div class="allButtons">
         <to_do_list_Edit :item="task"></to_do_list_Edit>
         <button class="btn-1" @click="removeTask(task.id)">Borrar</button>
-        <button class="btn-2" @click="Empezando(task.id, task.status)">Iniciar</button>
-        <button class="btn-3" @click="Trabajando(task.id, task.status)">Trabajando</button>
+        <button class="btn-2" @click="Moviendo(task.id, 1)">
+          Iniciar
+        </button>
+        <button class="btn-3" @click="Moviendo(task.id, 2)">
+          Trabajando
+        </button>
       </div>
     </li>
   </ul>
-  
 </template>
 
 <script>
@@ -48,8 +62,8 @@ import to_do_list_Edit from "../components/to_do_list_Edit.vue";
 export default {
   props: {
     estado: {
-        type: Number,
-        required: false
+      type: Number,
+      required: false,
     },
   },
   data() {
@@ -67,6 +81,16 @@ export default {
     to_do_list_Edit,
   },
   methods: {
+    startDrag(evt, task) {
+      evt.dataTransfer.dropEffect = 'move'
+      evt.dataTransfer.effectAllowed = 'move'
+      evt.dataTransfer.setData('taskId', task.id)
+    },
+    onDrop(evt, status) {
+      const taskId = evt.dataTransfer.getData('taskId')
+      this.tasksStore.Moviendo(taskId, status);
+      console.log("onDrop")
+    },
     newTask() {
       this.status = this.estado;
       this.tasksStore.createTask(
@@ -82,14 +106,8 @@ export default {
     editTask(taskId, title) {
       this.tasksStore.updateTask(taskId, title);
     },
-    Empezando(taskId, status) {
-      this.tasksStore.Empezando(taskId, status);
-    },
-    Trabajando(taskId, status) {
-      this.tasksStore.Trabajando(taskId, status);
-    },
-    Terminado(taskId, status) {
-      this.tasksStore.Terminado(taskId, status);
+    Moviendo(taskId, status) {
+      this.tasksStore.Moviendo(taskId, status);
     },
   },
   computed: {
@@ -103,19 +121,20 @@ export default {
 </script>
 
 <style scoped>
-
 .marg-list-1 {
   margin-left: -17px;
   margin-right: 9px;
- 
+  min-height: 200px;
 }
 .marg-list-2 {
   margin-left: -17px;
   margin-right: 9px;
+  min-height: 200px;
 }
 .marg-list-3 {
   margin-left: -17px;
   margin-right: 9px;
+  min-height: 200px;
 }
 
 .btn-nueva-tarea {
@@ -129,76 +148,70 @@ export default {
   cursor: pointer;
 }
 .listado-tareas-1 {
-
   word-wrap: break-word;
   background-color: rgb(87, 195, 195);
   margin: 6px 0px;
   border-radius: 12px;
   list-style: none;
-  padding: 10px;
+  padding: 5px;
   border-width: 1px;
-   border-style: solid;
-   box-shadow: 3px 3px 1px;
+  border-style: solid;
+  box-shadow: 3px 3px 1px;
 }
 .listado-tareas-2 {
-
-word-wrap: break-word;
-background-color: rgb(87, 195, 195);
-margin: 6px 0px;
-border-radius: 12px;
-list-style: none;
-padding: 10px;
-border-width: 1px;
-   border-style: solid;
-   box-shadow: 3px 3px 1px;
+  word-wrap: break-word;
+  background-color: rgb(87, 195, 195);
+  margin: 6px 0px;
+  border-radius: 12px;
+  list-style: none;
+  padding: 5px;
+  border-width: 1px;
+  border-style: solid;
+  box-shadow: 3px 3px 1px;
 }
 .listado-tareas-3 {
-
-word-wrap: break-word;
-background-color: rgb(87, 195, 195);
-margin: 6px 0px;
-border-radius: 12px;
-list-style: none;
-padding: 10px;
-border-width: 1px;
-   border-style: solid;
-   box-shadow: 3px 3px 1px;
+  word-wrap: break-word;
+  background-color: rgb(87, 195, 195);
+  margin: 6px 0px;
+  border-radius: 12px;
+  list-style: none;
+  padding: 5px;
+  border-width: 1px;
+  border-style: solid;
+  box-shadow: 3px 3px 1px;
 }
 .allButtons {
   display: flex;
   justify-content: space-around;
-  padding: 8px;
-
+  padding: 0px;
+  flex-wrap: wrap;
 }
 
 .btn-1 {
-  margin-left: 4px;
-  margin-right: 4px;
+  margin: 4px;
   background-color: rgb(216, 66, 6);
   color: white;
-  padding: 5px 10px;
+  padding: 5px 5px;
   border-radius: 14px;
   font-size: 12px;
   cursor: pointer;
 }
 .btn-2 {
-  margin-left: 4px;
-  margin-right: 4px;
+  margin: 4px;
   background-color: rgb(138, 92, 143);
   color: white;
-  padding: 5px 10px;
+  padding: 5px 5px;
   border-radius: 14px;
   font-size: 12px;
   cursor: pointer;
 }
 .btn-3 {
-  margin-left: 4px;
-  margin-right: 4px;
+  margin: 4px;
   background-color: rgb(138, 92, 143);
   color: white;
-  padding: 5px 10px;
+  padding: 5px 5px;
   border-radius: 14px;
-    font-size: 12px;
-    cursor: pointer;
+  font-size: 12px;
+  cursor: pointer;
 }
 </style>
