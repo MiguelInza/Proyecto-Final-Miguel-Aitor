@@ -1,6 +1,6 @@
 <template>
   <header>
-    <h1>Listado de tareas</h1>
+    <h1>Listado de tareas Miguel</h1>
   </header>
 
   <div id="div1">
