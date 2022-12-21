@@ -35,10 +35,11 @@ export default {
 
 <style scoped>
 body {
+  margin-top: 120px;
   background-color: rgb(161, 152, 231);
   border-radius: 30px;
  
-  height: 400px;
+  height: 500px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -85,6 +86,7 @@ h2 {
 @media (max-width: 1000px) {
 
   body {
+    margin-top: 120px;
     display: flex;
     flex-direction: column;
     align-items: center;

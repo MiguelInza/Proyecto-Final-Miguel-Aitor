@@ -2,7 +2,7 @@
 
   <footer>
     <div>
-<img class="logo-principal" src="/src/images/logo1.png" alt="logo" width="150" />
+<img class="logo-principal" src="/src/images/logo1.png" alt="logo" width="110" />
   </div>
   <div id="text-footer">
   Síguenos por las redes:
@@ -27,33 +27,33 @@ export default {
 
 <style scoped>
 footer {
-  padding: 0px 40px;
+ height: 35px;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  border-radius: 30px;
   background-color:rgb(186, 219, 197);
-  margin-top: 10px;
-  padding: 20px;
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
 }
 
 #text-footer {
-  font-size: 20px;
+  font-size: 15px;
   font-family: "Trebuchet MS", Verdana, sans-serif;
   font-weight: bold;
 }
 
 .logo{
-  width: 28px;
-  height: 28px;
+  width: 22px;
+  height: 22px;
 }
 #logos-redes {
-  width: 500px;
+  width: 400px;
   display: flex;
   justify-content: space-around;
   align-items: center;
   object-fit: cover;
-
 
 }
 

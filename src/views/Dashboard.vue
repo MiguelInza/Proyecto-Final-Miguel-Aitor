@@ -6,17 +6,17 @@
   <div id="div1">
     <section id="sec1">
       <h2>Iniciar</h2>
-      <to_do_list :estado=1> </to_do_list>
+      <to_do_list :estado="1"> </to_do_list>
     </section>
 
     <section id="sec2">
       <h2>Trabajando</h2>
-      <to_do_list :estado=2> </to_do_list>
+      <to_do_list :estado="2"> </to_do_list>
     </section>
 
     <section id="sec3">
       <h2>Terminado</h2>
-      <to_do_list :estado=3> </to_do_list>
+      <to_do_list :estado="3"> </to_do_list>
     </section>
   </div>
 </template>
@@ -101,15 +101,14 @@ export default {
   margin-right: 10px;
   padding: 8px 8px;
   border-radius: 5px;
- 
 }
 .listado-tareas {
   word-wrap: break-word;
   background-color: rgb(87, 195, 195);
-  margin: 4px;
+  margin-top: 40px;
+
   border-radius: 7px;
   list-style: none;
-  padding: 10px;
 
 }
 
@@ -117,16 +116,13 @@ export default {
   display: flex;
   justify-content: space-around;
   padding: 8px;
-
 }
 
 header {
   background-color: rgb(172, 172, 225);
   /*width: 90vw;*/
-
-
+margin-top: 130px;
   border-radius: 15px;
-
 }
 #div1 {
   display: flex;
@@ -134,11 +130,10 @@ header {
   flex-wrap: wrap;
 }
 h1 {
-
   display: flex;
- align-items: center;
- justify-content: center;
-  height: 60px;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
   vertical-align: middle;
   font-variant: small-caps;
   letter-spacing: 3px;
@@ -146,7 +141,6 @@ h1 {
 }
 h2 {
   text-align: center;
-
 }
 #sec1 {
   background-color: rgb(207, 43, 70);
@@ -156,6 +150,7 @@ h2 {
   margin: 10px;
   border-radius: 20px;
   box-shadow: 3px 3px 1px;
+  margin-bottom: 40px;
 }
 #sec2 {
   background-color: rgb(240, 240, 131);
@@ -165,6 +160,7 @@ h2 {
   margin: 10px;
   border-radius: 20px;
   box-shadow: 3px 3px 1px;
+  margin-bottom: 40px;
 }
 #sec3 {
   background-color: rgb(122, 223, 122);
@@ -174,5 +170,6 @@ h2 {
   margin: 10px;
   border-radius: 20px;
   box-shadow: 3px 3px 1px;
+  margin-bottom: 40px;
 }
 </style>
