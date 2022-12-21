@@ -2,12 +2,16 @@
   <nav>
     <div class="emoji-and-logo">
       <div>
-      <img class="logo-emoji" src="/src/images/logo-christmas.png" alt="logo" />
+        <img
+          class="logo-emoji"
+          src="/src/images/logo-christmas.png"
+          alt="logo"
+        />
+      </div>
+      <div>
+        <img class="logo-img-main" src="/src/images/logo1.png" alt="logo" />
+      </div>
     </div>
-    <div>
-      <img class="logo-img-main" src="/src/images/logo1.png" alt="logo" />
-    </div>
-  </div>
 
     <div class="buttons">
       <div class="button1">
@@ -39,7 +43,6 @@ export default {
 nav {
   height: 100px;
   margin-right: 8px;
-
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -50,14 +53,14 @@ nav {
   top: 0px;
   width: 100%;
 }
-.emoji-and-logo{
-    display: flex;
-align-items: center;
-margin-left: 70px;
-  }
+.emoji-and-logo {
+  display: flex;
+  align-items: center;
+  margin-left: 70px;
+}
 .logo-emoji {
   width: 100px;
-margin-left: 20px;
+  margin-left: 20px;
 }
 .logo-img-main {
   width: 280px;
@@ -103,28 +106,22 @@ margin-left: 20px;
 }
 
 @media (max-width: 1000px) {
-
-
   nav {
-  
     height: 60px;
     align-items: center;
     margin-right: 10px;
   }
-  .emoji-and-logo{
-
-margin-left: 20px;
+  .emoji-and-logo {
+    margin-left: 20px;
   }
   .logo-emoji {
     margin-left: 20px;
     width: 60px;
     margin-top: 5px;
-
   }
   .logo-img-main {
     margin-left: 10px;
     width: 125px;
-
   }
   .button1 button {
     margin: 0px 7px;

@@ -26,8 +26,6 @@ import { mapStores } from "pinia";
 import userStore from "../stores/user";
 import tasksStore from "../stores/tasks";
 import to_do_list from "../components/to_do_list.vue";
-import in_process from "../components/in_process.vue";
-import done from "../components/done.vue";
 
 export default {
   data() {
@@ -43,8 +41,6 @@ export default {
   },
   components: {
     to_do_list,
-    in_process,
-    done,
   },
   methods: {
     newTask() {
