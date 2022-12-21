@@ -55,9 +55,9 @@ export default {
 <style scoped>
 
 body {
-  margin-top: 10px;
+  margin-top: 120px;
 
-  height: 400px;
+  height: 500px;
   background-color: rgb(185, 130, 233);
   border-radius: 30px;
   display: flex;
@@ -140,7 +140,7 @@ align-items: center;
 @media (max-width: 667px) {
 
 body {
-  height: 350px;
+  height: 480px;
 }
   .text-line1 {
   font-size: 24px;

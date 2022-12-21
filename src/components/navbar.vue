@@ -56,7 +56,7 @@ align-items: center;
   }
 .logo-emoji {
   width: 100px;
-  margin-left: 130px;
+
 }
 .logo-img-main {
   width: 280px;
@@ -103,30 +103,27 @@ align-items: center;
 
 @media (max-width: 1015px) {
 
-  .emoji-and-logo{
-    display: flex;
-align-items: center;
-  }
+
   nav {
-    display: flex;
-    flex-direction: column;
+  
+    height: 60px;
     align-items: center;
-    height: 110px;
+    margin-right: 10px;
   }
   .logo-emoji {
     margin: 0px 0px;
-    width: 70px;
+    width: 60px;
     margin-top: 5px;
 
   }
   .logo-img-main {
-    margin: 0px 0px;
-    width: 200px;
+    margin-left: 10px;
+    width: 125px;
 
   }
   .button1 button {
     margin: 0px 7px;
-    width: 80px;
+    width: 70px;
     padding: 5px;
     font-size: 9px;
     font-weight: bolder;
@@ -143,7 +140,7 @@ align-items: center;
 
   .button3 button {
     margin: 0px 7px;
-    width: 80px;
+    width: 50px;
     padding: 5px;
     font-size: 9px;
     font-weight: bolder;

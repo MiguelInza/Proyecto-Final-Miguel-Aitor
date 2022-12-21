@@ -106,7 +106,6 @@ export default {
   word-wrap: break-word;
   background-color: rgb(87, 195, 195);
   margin-top: 40px;
-
   border-radius: 7px;
   list-style: none;
 
@@ -121,7 +120,7 @@ export default {
 header {
   background-color: rgb(172, 172, 225);
   /*width: 90vw;*/
-margin-top: 130px;
+margin-top: 100px;
   border-radius: 15px;
 }
 #div1 {

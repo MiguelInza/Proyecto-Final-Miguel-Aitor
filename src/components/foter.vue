@@ -1,12 +1,14 @@
 <template>
 
   <footer>
+
     <div>
 <img class="logo-principal" src="/src/images/logo1.png" alt="logo" width="110" />
   </div>
   <div id="text-footer">
   Síguenos por las redes:
   </div>
+
   <div id="logos-redes">
   <img class="logo" src="/src/images/logo-fb.png" alt="logo" />
   <img class="logo" src="/src/images/logo-tweet.png" alt="logo"  />
@@ -14,6 +16,7 @@
   <img class="logo" src="/src/images/logo-yout.png" alt="logo"  />
   <img class="logo" src="/src/images/logo-insta.png" alt="logo"  />
 </div>
+
 </footer>
 </template>
 
@@ -67,31 +70,34 @@ footer {
 }
 @media (max-width: 700px) {
 
+
 footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+
+  height: 35px;
+
 }
 
 .logo-principal {
-width: 120px;
-margin-bottom: 10px;
+width: 90px;
+margin-bottom: 2px;
+margin-right: 20px;
 }
 .logo{
-  margin-top: 10px;
+
   width: 22px;
   height: 22px;
+
 }
 #text-footer {
-  font-size: 14px;
-  margin-bottom: 8px;
- 
+  font-size: 12px;
+  margin-bottom: 5px;
   
 }
 
 #logos-redes {
-  width: 300px;
-
+  width: 180px;
+  margin-top: 5px;
+margin-bottom: 7px;
 }
 }
 
