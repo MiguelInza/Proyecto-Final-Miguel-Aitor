@@ -68,4 +68,12 @@ export default {
   font-size: 12px;
   cursor: pointer;
 }
+.btn-edit:hover {
+ 
+  background-color:  white;
+  color:   rgb(32, 100, 100);
+  font-weight: bold;
+  border-radius: 8px;
+ transition: 0.4s;
+}
 </style>

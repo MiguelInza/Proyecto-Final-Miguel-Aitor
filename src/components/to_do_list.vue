@@ -147,6 +147,16 @@ export default {
   font-weight: bolder;
   cursor: pointer;
 }
+.btn-nueva-tarea:hover {
+  margin-left: px;
+  margin-right: 8px;
+  background-color:  rgb(255, 255, 255);
+  color: rgb(56, 64, 163);
+  padding: 5px 10px;
+  border-radius: 8px;
+ transition: 0.5s;
+ font-size: 14px;
+}
 .listado-tareas-1 {
   word-wrap: break-word;
   background-color: rgb(87, 195, 195);
@@ -196,6 +206,14 @@ export default {
   font-size: 12px;
   cursor: pointer;
 }
+.btn-1:hover {
+  background-color: white;
+  color: rgb(216, 66, 6);
+transition: 0.4s;
+font-weight: bold;
+border-radius: 8px;
+}
+
 .btn-2 {
   margin: 4px;
   background-color: rgb(138, 92, 143);
@@ -205,6 +223,13 @@ export default {
   font-size: 12px;
   cursor: pointer;
 }
+.btn-2:hover {
+  background-color: white;
+  color:rgb(138, 92, 143);
+transition: 0.4s;
+font-weight: bold;
+border-radius: 8px;
+}
 .btn-3 {
   margin: 4px;
   background-color: rgb(138, 92, 143);
@@ -213,5 +238,13 @@ export default {
   border-radius: 14px;
   font-size: 12px;
   cursor: pointer;
+}
+.btn-3:hover {
+  background-color: white;
+  color:rgb(138, 92, 143);
+transition: 0.4s;
+font-weight: bold;
+border-radius: 8px;
+font-weight: bold;
 }
 </style>
