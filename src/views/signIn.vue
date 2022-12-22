@@ -68,7 +68,6 @@ export default {
 <style scoped>
 body {
   margin-top: 110px;
-  /*height: 500px;*/
   height: 77vh;
   background-color: rgb(197, 154, 236);
   border-radius: 30px;
@@ -110,6 +109,13 @@ h1 {
   background-color: rgb(228, 235, 240);
   border-radius: 10px;
 }
+#hole-email:hover {
+ 
+  width: 340px;
+  transition: 0.5s;
+  background-color: antiquewhite;
+}
+
 .password-line {
   margin-bottom: 30px;
 }
@@ -124,6 +130,13 @@ h1 {
   background-color: rgb(228, 235, 240);
   border-radius: 10px;
 }
+#hole-password:hover {
+ 
+ width: 340px;
+ transition: 0.5s;
+ background-color: antiquewhite;
+}
+
 .create-account {
   margin-top: 30px;
   font-size: 17px;
@@ -133,6 +146,13 @@ h1 {
   border-radius: 20px;
   background-color: rgb(40, 203, 89);
   cursor: pointer;
+}
+.create-account:hover {
+  background-color: white;
+
+color: rgb(167, 205, 205);
+  background-color: rgb(55, 63, 216);
+  transition: 0.6s;
 }
 .text-already-account {
   margin-top: 10px;
@@ -148,13 +168,15 @@ h1 {
   border-radius: 12px;
   cursor: pointer;
 }
+.signUp-btn:hover {
+color: white;
+transition: 0.5s;
+}
 
 @media (max-width: 1000px) {
   body {
-    /*height: 550px;*/
     height: 82vh;
     margin-top: 70px;
-    /*margin-top: 70px;*/
     margin-bottom: 50px;
   }
   .text-line1 {
@@ -168,27 +190,41 @@ h1 {
   }
 
   #hole-email {
-    margin-top: 8px;
-    border: none;
-    padding-left: 12px;
-    padding-bottom: 8px;
-    padding-top: 8px;
-    width: 240px;
-    border-radius: 10px;
-  }
+  margin-top: 8px;
+  border: none;
+  padding-left: 12px;
+  padding-bottom: 8px;
+  padding-top: 8px;
+  width: 240px;
+  border-radius: 10px;
+}
+#hole-email:hover {
+ 
+ width: 270px;
+ transition: 0.5s;
+
+}
+
   .password-line {
     margin-bottom: 15px;
     font-size: 10px;
   }
   #hole-password {
-    margin-top: 8px;
-    border: none;
-    padding-left: 12px;
-    padding-bottom: 8px;
-    padding-top: 8px;
-    width: 240px;
-    border-radius: 10px;
-  }
+  margin-top: 8px;
+  border: none;
+  padding-left: 12px;
+  padding-bottom: 8px;
+  padding-top: 8px;
+  width: 240px;
+  border-radius: 10px;
+}
+#hole-password:hover {
+ 
+ width: 270px;
+ transition: 0.5s;
+
+}
+
   .create-account {
     margin-top: 12px;
     margin-top: 20px;

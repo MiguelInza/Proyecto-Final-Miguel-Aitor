@@ -1,6 +1,8 @@
 <template>
   <nav>
     <div class="emoji-and-logo">
+     
+      
       <div>
         <li
           class="nav-item"
@@ -16,18 +18,14 @@
           <img
             v-else
             class="logo-emoji"
-            src="/src/images/logo-christmas-2.jpeg"
+            src="/src/images/campanaIzquierda.png"
             alt="logo2"
           />
         </li>
-        <!--
-        <img
-          class="logo-emoji"
-          src="/src/images/logo-christmas.png"
-          alt="logo"
-        />
-        -->
+     
       </div>
+
+
       <div>
         <img class="logo-img-main" src="/src/images/logo1.png" alt="logo" />
       </div>
@@ -55,7 +53,7 @@
 export default {
   data() {
     return {
-      homeLink: false,
+      homeLink:false,
     };
   },
 };
@@ -75,7 +73,6 @@ nav {
   top: 0px;
   width: 100%;
 }
-
 .nav-item {
   list-style: none;
 }
@@ -107,6 +104,15 @@ nav {
   background-color: rgb(83, 186, 186);
   cursor: pointer;
 }
+.button1 button:hover{
+  margin: 10px;
+  width: 140px;
+  padding: 7px;
+  font-size: 13px;
+
+  border-radius: 12px;
+transition: 0.5s;
+}
 .button2 button {
   margin: 8px;
   width: 100px;
@@ -117,6 +123,16 @@ nav {
   background-color: rgb(64, 170, 170);
   cursor: pointer;
 }
+.button2 button:hover{
+  margin: 10px;
+  width: 140px;
+  padding: 7px;
+  font-size: 13px;
+
+  border-radius: 12px;
+transition: 0.5s;
+}
+
 .button3 button {
   margin: 8px;
   width: 70px;
@@ -126,6 +142,15 @@ nav {
   border-radius: 10px;
   background-color: rgb(49, 151, 151);
   cursor: pointer;
+}
+.button3 button:hover{
+  margin: 10px;
+  width: 90px;
+  padding: 7px;
+  font-size: 13px;
+
+  border-radius: 12px;
+transition: 0.5s;
 }
 
 @media (max-width: 1000px) {
@@ -152,16 +177,33 @@ nav {
     padding: 5px;
     font-size: 9px;
     font-weight: bolder;
-    border-radius: 4px;
+    border-radius: 10px;
   }
+  .button1 button:hover{
+    margin: 0px 9px;
+    width: 73px;
+    padding: 6px;
+    font-size: 10px;
+    border-radius: 4px;
+transition: 0.5s;
+}
   .button2 button {
     margin: 0px 7px;
     width: 80px;
     padding: 5px;
     font-size: 9px;
     font-weight: bolder;
-    border-radius: 4px;
+    border-radius: 10px;
   }
+  .button2 button:hover{
+    margin: 0px 9px;
+    width: 90px;
+    padding: 6px;
+    font-size: 10px;
+    border-radius: 4px;
+transition: 0.5s;
+}
+
   .button3 button {
     margin: 0px 7px;
     width: 50px;
@@ -170,6 +212,14 @@ nav {
     font-weight: bolder;
     border-radius: 4px;
   }
+  .button3 button:hover{
+    margin: 0px 9px;
+    width: 65px;
+    padding: 6px;
+    font-size: 10px;
+    border-radius: 4px;
+transition: 0.5s;
+}
   .buttons {
     margin-bottom: 8px;
   }
