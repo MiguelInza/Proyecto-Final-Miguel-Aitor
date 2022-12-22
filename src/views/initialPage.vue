@@ -36,10 +36,11 @@ export default {
 
 body {
   margin-top: 110px;
+  height: 77vh;
   background-color: rgb(161, 152, 231);
   border-radius: 30px;
 
-  height: 510px;
+
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -84,8 +85,9 @@ h2 {
 
 @media (max-width: 1000px) {
   body {
-    height: 550px;
+    height: 82vh;
     margin-top: 70px;
+    margin-bottom: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;

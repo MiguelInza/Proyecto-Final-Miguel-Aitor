@@ -70,7 +70,7 @@ export default {
 <style scoped>
 body {
   margin-top: 110px;
-  height: 500px;
+  height: 77vh;
   background-color: rgb(197, 154, 236);
   border-radius: 30px;
   display: flex;
@@ -157,8 +157,9 @@ h1 {
 
 @media (max-width: 1000px) {
   body {
-    height: 550px;
+    height: 82vh;
     margin-top: 70px;
+    margin-bottom: 50px;
   }
   .text-line1 {
     font-size: 24px;
