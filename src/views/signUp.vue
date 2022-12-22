@@ -70,7 +70,6 @@ export default {
 body {
   margin-top: 110px;
   height: 77vh;
-  height: 77vh;;
   background-color: rgb(185, 130, 233);
   border-radius: 30px;
   display: flex;
