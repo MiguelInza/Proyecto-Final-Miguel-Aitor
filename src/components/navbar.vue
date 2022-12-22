@@ -3,7 +3,7 @@
     <div class="emoji-and-logo">
 
       <div>
-        <button @click.prevent="audio.isPlaying ? pause(audio) : play(audio)" v-for="audio in audios" :key="audio.id" >
+        <button class="btn-music" @click.prevent="audio.isPlaying ? pause(audio) : play(audio)" v-for="audio in audios" :key="audio.id" >
     {{ audio.isPlaying ? 'Pause' : 'Play' }} {{ audio.name }}
   </button>
       </div>
@@ -98,6 +98,26 @@ nav {
 .nav-item {
   list-style: none;
 }
+.btn-music {
+
+  margin: 4px;
+  background-color: rgb(216, 66, 6);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 14px;
+  font-size: 12px;
+  cursor: pointer;
+}
+.btn-music:hover {
+  background-color: white;
+  color: rgb(216, 66, 6);
+transition: 0.4s;
+font-weight: bold;
+border-radius: 8px;
+
+}
+
+
 .emoji-and-logo {
   display: flex;
   align-items: center;
