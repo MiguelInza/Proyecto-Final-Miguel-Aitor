@@ -1,11 +1,12 @@
 <template>
   <body>
-
-<div class="container"> </div>
-    
-    
+    <div class="container"></div>
     <div>
-<img class="logo-initial-page" src="/src/images/initial-img.png" alt="maind-img" />
+      <img
+        class="logo-initial-page"
+        src="/src/images/initial-img.png"
+        alt="maind-img"
+      />
     </div>
     <div>
       <h1>Administra tus tareas con Remember it.</h1>
@@ -35,7 +36,7 @@ body {
   margin-top: 110px;
   background-color: rgb(161, 152, 231);
   border-radius: 30px;
- 
+
   height: 510px;
   display: flex;
   justify-content: space-around;
@@ -62,51 +63,45 @@ h2 {
 }
 
 @media (max-width: 1180px) {
-
   .logo-initial-page {
     width: 360px;
   }
   h1 {
-  width: 440px;
-  font-size: 34px;
+    width: 440px;
+    font-size: 34px;
 
-  padding-left: 50px;
-  padding-right: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  h2 {
+    width: 400px;
+    font-size: 23px;
+  }
 }
-h2 {
-  width: 400px;
-  font-size: 23px;
-}
-}
-
 
 @media (max-width: 1000px) {
-
   body {
     height: 550px;
     margin-top: 70px;
     display: flex;
     flex-direction: column;
     align-items: center;
-   
   }
   .logo-initial-page {
-  width: 250px;
-}
-h1 {
-  width: 200px;
-  font-size: 25px;
+    width: 250px;
+  }
+  h1 {
+    width: 200px;
+    font-size: 25px;
 
-  padding-left: 100px;
-  padding-right: 100px;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  h2 {
+    width: 200px;
+    font-size: 18px;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
 }
-h2 {
-  width: 200px;
-  font-size: 18px;
-  padding-left: 100px;
-  padding-right: 100px;
-}
-
-}
-
 </style>
