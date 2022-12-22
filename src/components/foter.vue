@@ -52,8 +52,8 @@ footer {
   height: 22px;
   float: left;
   transition: all 0.5s ease;
-
 }
+
 #logos-redes {
   width: 400px;
   display: flex;
