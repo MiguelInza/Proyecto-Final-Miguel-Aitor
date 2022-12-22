@@ -22,13 +22,7 @@
             alt="logo2"
           />
         </li>
-        <!--
-        <img
-          class="logo-emoji"
-          src="/src/images/logo-christmas.png"
-          alt="logo"
-        />
-        -->
+     
       </div>
 
 
