@@ -136,7 +136,6 @@ export default {
   margin-right: 9px;
   min-height: 200px;
 }
-
 .btn-nueva-tarea {
   margin-left: 8px;
   margin-right: 8px;
@@ -186,7 +185,6 @@ export default {
   padding: 0px;
   flex-wrap: wrap;
 }
-
 .btn-1 {
   margin: 4px;
   background-color: rgb(216, 66, 6);

@@ -2,11 +2,31 @@
   <nav>
     <div class="emoji-and-logo">
       <div>
+        <li
+          class="nav-item"
+          @mouseover="homeLink = !homelink"
+          @mouseleave="homeLink = false"
+        >
+          <img
+            v-if="homeLink"
+            class="logo-emoji"
+            src="/src/images/logo-christmas.png"
+            alt="logo"
+          />
+          <img
+            v-else
+            class="logo-emoji"
+            src="/src/images/logo-christmas-2.jpeg"
+            alt="logo2"
+          />
+        </li>
+        <!--
         <img
           class="logo-emoji"
           src="/src/images/logo-christmas.png"
           alt="logo"
         />
+        -->
       </div>
       <div>
         <img class="logo-img-main" src="/src/images/logo1.png" alt="logo" />
@@ -34,7 +54,9 @@
 <script>
 export default {
   data() {
-    return {};
+    return {
+      homeLink: false,
+    };
   },
 };
 </script>
@@ -53,6 +75,10 @@ nav {
   top: 0px;
   width: 100%;
 }
+
+.nav-item {
+  list-style: none;
+}
 .emoji-and-logo {
   display: flex;
   align-items: center;
@@ -66,13 +92,11 @@ nav {
   width: 280px;
   margin-left: 200px;
 }
-
 .buttons {
   display: flex;
   flex-direction: row;
   margin-right: 30px;
 }
-
 .button1 button {
   margin: 8px;
   width: 100px;
@@ -93,7 +117,6 @@ nav {
   background-color: rgb(64, 170, 170);
   cursor: pointer;
 }
-
 .button3 button {
   margin: 8px;
   width: 70px;
@@ -139,7 +162,6 @@ nav {
     font-weight: bolder;
     border-radius: 4px;
   }
-
   .button3 button {
     margin: 0px 7px;
     width: 50px;

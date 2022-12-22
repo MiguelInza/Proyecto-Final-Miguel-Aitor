@@ -91,42 +91,20 @@ export default {
 </script>
 
 <style scoped>
-.add-task {
-  background-color: rgb(118, 198, 118);
-  margin-left: 10px;
-  margin-right: 10px;
-  padding: 8px 8px;
-  border-radius: 5px;
-}
-.listado-tareas {
-  word-wrap: break-word;
-  background-color: rgb(87, 195, 195);
-  margin-top: 40px;
-  border-radius: 7px;
-  list-style: none;
-
-}
-
-.allButtons {
-  display: flex;
-  justify-content: space-around;
-  padding: 8px;
-}
-
 header {
   background-color: rgb(172, 172, 225);
   /*width: 90vw;*/
-margin-top: 110px;
-
+  margin-top: 110px;
   border-radius: 15px;
 }
+
 #div1 {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
 }
-h1 {
 
+h1 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -139,6 +117,7 @@ h1 {
 h2 {
   text-align: center;
 }
+
 #sec1 {
   background-color: rgb(207, 43, 70);
   border-style: double;
@@ -149,6 +128,7 @@ h2 {
   box-shadow: 3px 3px 1px;
   margin-bottom: 40px;
 }
+
 #sec2 {
   background-color: rgb(240, 240, 131);
   border-style: double;
@@ -159,6 +139,7 @@ h2 {
   box-shadow: 3px 3px 1px;
   margin-bottom: 40px;
 }
+
 #sec3 {
   background-color: rgb(122, 223, 122);
   border-style: double;
@@ -172,10 +153,7 @@ h2 {
 
 @media (max-width: 1000px) {
   header {
-
-margin-top: 70px;
-
-
-}
+    margin-top: 70px;
+  }
 }
 </style>
