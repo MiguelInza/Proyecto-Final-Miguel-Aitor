@@ -140,6 +140,13 @@ h1 {
   background-color: rgb(40, 203, 89);
   cursor: pointer;
 }
+.create-account:hover {
+  background-color: white;
+
+color: rgb(167, 205, 205);
+  background-color: rgb(55, 63, 216);
+  transition: 0.6s;
+}
 .text-already-account {
   margin-top: 10px;
   font-size: 16px;
@@ -153,6 +160,10 @@ h1 {
   background-color: rgb(167, 93, 231);
   border-radius: 12px;
   cursor: pointer;
+}
+.signUp-btn:hover {
+color: white;
+transition: 0.5s;
 }
 
 @media (max-width: 1000px) {

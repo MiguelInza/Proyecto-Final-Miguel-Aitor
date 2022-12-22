@@ -131,6 +131,13 @@ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   background-color: rgb(40, 203, 89);
   cursor: pointer;
 }
+.create-account:hover {
+  background-color: white;
+
+color: rgb(221, 231, 231);
+  background-color: rgb(216, 55, 55);
+  transition: 0.6s;
+}
 .text-already-account{
   margin-top: 10px;
 font-size: 16px;
@@ -145,6 +152,10 @@ align-items: center;
   background-color: rgb(167, 93, 231);
   border-radius: 12px;
   cursor: pointer;
+}
+.signIn-btn:hover {
+color: white;
+transition: 0.5s;
 }
 
 @media (max-width: 1000px) {
