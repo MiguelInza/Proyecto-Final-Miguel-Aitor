@@ -46,7 +46,6 @@ footer {
   font-family: "Trebuchet MS", Verdana, sans-serif;
   font-weight: bold;
 }
-
 .logo {
   width: 22px;
   height: 22px;
@@ -71,11 +70,11 @@ footer {
     font-size: 14px;
   }
 }
+
 @media (max-width: 700px) {
   footer {
     height: 35px;
   }
-
   .logo-principal {
     width: 90px;
     margin-bottom: 2px;

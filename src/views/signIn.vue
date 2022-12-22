@@ -1,8 +1,6 @@
 <template>
   <body>
-   <h1>
-    Iniciar sesión
-   </h1>
+    <h1>Iniciar sesión</h1>
     <form @submit.prevent="signIn">
       <label class="text-line1"> Email</label>
       <div class="email-line">
@@ -80,19 +78,16 @@ body {
 }
 
 h1 {
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-size: 34px;
-
 }
 .text-line1 {
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-size: 28px;
-
 }
 .text-line2 {
   font-size: 28px;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 .btn-create-account {
   display: flex;
@@ -100,10 +95,10 @@ h1 {
   justify-content: center;
   align-items: center;
 }
-
 .email-line {
   margin-bottom: 20px;
 }
+
 #hole-email {
   margin-top: 8px;
   border: none;

@@ -1,6 +1,13 @@
 <template>
   <nav>
     <div class="emoji-and-logo">
+
+      <div>
+        <button @click.prevent="audio.isPlaying ? pause(audio) : play(audio)" v-for="audio in audios" :key="audio.id" >
+    {{ audio.isPlaying ? 'Pause' : 'Play' }} {{ audio.name }}
+  </button>
+      </div>
+
       <div>
         <li
           class="nav-item"
@@ -53,7 +60,23 @@ export default {
   data() {
     return {
       homeLink: false,
+      audios: [{
+      isPlaying: false,
+      file: new Audio('/src/images/Wham - Last Christmas.mp3'),
+      id: 'muscle-car',
+      name: 'Last Christmas',
+      }],
     };
+  },
+  methods: {
+    play(audio) {
+      audio.isPlaying = true;
+      audio.file.play();
+    },
+    pause(audio) {
+      audio.isPlaying = false;
+      audio.file.pause();
+    },
   },
 };
 </script>
@@ -88,13 +111,11 @@ nav {
   width: 280px;
   margin-left: 200px;
 }
-
 .buttons {
   display: flex;
   flex-direction: row;
   margin-right: 30px;
 }
-
 .button1 button {
   margin: 8px;
   width: 100px;
