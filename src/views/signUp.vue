@@ -56,6 +56,7 @@ export default {
 </script>
 
 <style scoped>
+@import url(//db.onlinewebfonts.com/c/e6920cc7524bc3012ae9ad4179e060ee?family=Fantasy);
 
 body {
   margin-top: 110px;
@@ -69,7 +70,7 @@ body {
   align-items: center;
 }
 h1 {
-  font-family: fantasy;
+  font-family: Fantasy;
   font-size: 34px;
 }
 .text-line1 {

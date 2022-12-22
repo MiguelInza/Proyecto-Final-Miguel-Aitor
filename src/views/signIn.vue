@@ -68,11 +68,6 @@ export default {
 </script>
 
 <style scoped>
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 078b268cd4e219d5fd43419485e91c0e97c2fb68
 body {
   margin-top: 110px;
   height: 500px;
