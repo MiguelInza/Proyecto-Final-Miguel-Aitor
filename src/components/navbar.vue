@@ -61,7 +61,7 @@ export default {
       isPlaying: false,
       file: new Audio('/src/images/Wham - Last Christmas.mp3'),
       id: 'muscle-car',
-      name: 'Feliz Navidad',
+      name: 'Last Christmas',
       }],
     };
   },
