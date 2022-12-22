@@ -80,14 +80,19 @@ body {
 }
 
 h1 {
-  font-family: fantasy;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: 34px;
+
 }
 .text-line1 {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: 28px;
+
 }
 .text-line2 {
   font-size: 28px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  
 }
 .btn-create-account {
   display: flex;
