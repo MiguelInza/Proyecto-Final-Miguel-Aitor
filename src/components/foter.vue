@@ -53,6 +53,10 @@ footer {
   float: left;
   transition: all 0.5s ease;
 }
+.logo:hover {
+  width: 32px;
+  height: 32px;
+}
 
 #logos-redes {
   width: 400px;
