@@ -68,11 +68,6 @@ export default {
 </script>
 
 <style scoped>
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 078b268cd4e219d5fd43419485e91c0e97c2fb68
 body {
   margin-top: 110px;
   height: 500px;
@@ -85,14 +80,19 @@ body {
 }
 
 h1 {
-  font-family: fantasy;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: 34px;
+
 }
 .text-line1 {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: 28px;
+
 }
 .text-line2 {
   font-size: 28px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  
 }
 .btn-create-account {
   display: flex;

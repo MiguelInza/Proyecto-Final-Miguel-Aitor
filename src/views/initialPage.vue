@@ -32,6 +32,8 @@ export default {
 </script>
 
 <style scoped>
+
+
 body {
   margin-top: 110px;
   background-color: rgb(161, 152, 231);
@@ -50,15 +52,16 @@ body {
 h1 {
   width: 440px;
   font-size: 38px;
-  font-family: fantasy;
-
+  
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-style: italic;
   padding-left: 50px;
   padding-right: 50px;
 }
 h2 {
   width: 400px;
   font-size: 26px;
-  font-family: fantasy;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-style: italic;
 }
 

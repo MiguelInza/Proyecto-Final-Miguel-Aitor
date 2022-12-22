@@ -1,4 +1,5 @@
 <template>
+  
   <body>
     <h1>
       Registrarse
@@ -69,15 +70,18 @@ body {
   align-items: center;
 }
 h1 {
-  font-family: fantasy;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: 34px;
 }
 .text-line1 {
   font-size: 28px;
-
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  
 }
 .text-line2 {
   font-size: 28px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
 }
 .btn-create-account {
 
