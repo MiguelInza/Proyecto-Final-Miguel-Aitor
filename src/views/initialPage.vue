@@ -39,7 +39,7 @@ body {
   background-color: rgb(161, 152, 231);
   border-radius: 30px;
 
-  height: 510px;
+  height: 77vh;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -84,11 +84,12 @@ h2 {
 
 @media (max-width: 1000px) {
   body {
-    height: 550px;
+    height: 82vh;
     margin-top: 70px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 50px;
   }
   .logo-initial-page {
     width: 250px;

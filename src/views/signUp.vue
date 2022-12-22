@@ -62,7 +62,7 @@ export default {
 body {
   margin-top: 110px;
 
-  height: 500px;
+  height: 77vh;
   background-color: rgb(185, 130, 233);
   border-radius: 30px;
   display: flex;
@@ -152,8 +152,9 @@ align-items: center;
 @media (max-width: 1000px) {
 
 body {
-  height: 550px;
+  height: 82vh;
     margin-top: 70px;
+    margin-bottom: 50px;
 
 }
   .text-line1 {
