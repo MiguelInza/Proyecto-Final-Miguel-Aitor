@@ -1,13 +1,37 @@
 <template>
   <nav>
     <div class="emoji-and-logo">
+     
+      
       <div>
+        <li
+          class="nav-item"
+          @mouseover="homeLink = !homelink"
+          @mouseleave="homeLink = false"
+        >
+          <img
+            v-if="homeLink"
+            class="logo-emoji"
+            src="/src/images/logo-christmas.png"
+            alt="logo"
+          />
+          <img
+            v-else
+            class="logo-emoji"
+            src="/src/images/campanaIzquierda.png"
+            alt="logo2"
+          />
+        </li>
+        <!--
         <img
           class="logo-emoji"
           src="/src/images/logo-christmas.png"
           alt="logo"
         />
+        -->
       </div>
+
+
       <div>
         <img class="logo-img-main" src="/src/images/logo1.png" alt="logo" />
       </div>
@@ -34,7 +58,9 @@
 <script>
 export default {
   data() {
-    return {};
+    return {
+      homeLink:false,
+    };
   },
 };
 </script>
@@ -52,6 +78,9 @@ nav {
   left: 0px;
   top: 0px;
   width: 100%;
+}
+.nav-item {
+  list-style: none;
 }
 .emoji-and-logo {
   display: flex;
