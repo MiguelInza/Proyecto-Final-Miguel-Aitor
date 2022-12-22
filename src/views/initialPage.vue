@@ -54,7 +54,7 @@ h1 {
   font-size: 38px;
   
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-style: italic;
+  
   padding-left: 50px;
   padding-right: 50px;
 }
@@ -62,7 +62,7 @@ h2 {
   width: 400px;
   font-size: 26px;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-style: italic;
+
 }
 
 @media (max-width: 1180px) {
