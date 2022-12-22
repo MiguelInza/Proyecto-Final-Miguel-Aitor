@@ -5,11 +5,30 @@ import { supabase } from "../supabase";
 export default defineStore("tasks", {
   state() {
     return {
-      tasks: null,
+      tasks: [],
       user_id: "",
       title: "",
-      status: 1,
+      title2: "",
+      title3: "",
+      status: null,
     };
+  },
+  getters: {
+    doingTasks() {
+      return this.tasks.filter(function (task) {
+        return task.status === 1;
+       });
+    },
+    pendingTasks() {
+      return this.tasks.filter(function (task) {
+        return task.status === 2;
+       });
+    },
+    doneTasks() {
+      return this.tasks.filter(function (task) {
+        return task.status === 3;
+       });
+    },
   },
   actions: {
     async fetchTasks() {
@@ -42,6 +61,13 @@ export default defineStore("tasks", {
         .update({ title: title, })
         .eq('id', taskId)
         this.fetchTasks()
-    }
+    },
+    async Moviendo(taskId, status) {
+      const { error } = await supabase
+        .from('tasks')
+        .update({ status: status, })
+        .eq('id', taskId)
+        this.fetchTasks()
+    },
   },
 });

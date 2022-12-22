@@ -1,60 +1,22 @@
 <template>
   <header>
-    <h1>Our tasks</h1>
+    <h1>Listado de tareas</h1>
   </header>
+
   <div id="div1">
     <section id="sec1">
-      <h2>TO-DO list</h2>
-      <form @submit.prevent="newTask">
-        <button>Add New Task</button>
-        <input v-model="title" placeholder="write here!" />
-      </form>
-      <ul>
-        <to_do_list>
-        </to_do_list>
-      </ul>
-      <!--
-      <ul>
-        <li class="listado-tareas" v-for="task in tasksStore.tasks">
-          {{ task.title }}
-          <div class="allButtons" v-if="status=1">
-            <form @submit.prevent="editTask(task.id, task.title)">
-              <button @click="boton = !boton">Edit</button>
-              <input v-if="boton" v-model="task.title"/> 
-            </form>
-            <button @click="removeTask(task.id)">Remove</button>
-            <button @click="">In Process</button>
-            <button @click="">Done</button>
-          </div>
-        </li>
-      </ul>
-      -->
+      <h2>Iniciar</h2>
+      <to_do_list :estado="1"> </to_do_list>
     </section>
 
     <section id="sec2">
-      <h2>In process</h2>
-      <form @submit.prevent="newTask2">
-        <button>Add New Task</button>
-        <input v-model="title2" placeholder="write here!" />
-      </form>
-      <ul>
-        <li v-if="status==2" class="listado-tareas" v-for="task in tasksStore.tasks">
-          {{ task.title2 }}  {{ task.status }}
-          <div class="allButtons" >
-            <form @submit.prevent="editTask2(task.id, task.title2)">
-              <button @click="boton = !boton">Edit</button>
-              <input v-if="boton" v-model="task.title2"/> 
-            </form>
-            <button @click="removeTask(task.id)">Remove</button>
-            <button @click="">In Process</button>
-            <button @click="">Done</button>
-          </div>
-        </li>
-      </ul>
+      <h2>Trabajando</h2>
+      <to_do_list :estado="2"> </to_do_list>
     </section>
 
     <section id="sec3">
-      <h2>Done</h2>
+      <h2>Terminado</h2>
+      <to_do_list :estado="3"> </to_do_list>
     </section>
   </div>
 </template>
@@ -89,7 +51,6 @@ export default {
         this.status
       );
       this.title = "";
-      
     },
     newTask2() {
       this.status = 2;
@@ -99,7 +60,15 @@ export default {
         this.status
       );
       this.title2 = "";
-      
+    },
+    newTask3() {
+      this.status = 3;
+      this.tasksStore.createTask(
+        this.userStore.user.id,
+        this.title3,
+        this.status
+      );
+      this.title3 = "";
     },
     removeTask(taskId) {
       this.tasksStore.deleteTask(taskId);
@@ -132,10 +101,10 @@ export default {
 .listado-tareas {
   word-wrap: break-word;
   background-color: rgb(87, 195, 195);
-  margin: 4px;
+  margin-top: 40px;
   border-radius: 7px;
   list-style: none;
-  padding: 10px;
+
 }
 
 .allButtons {
@@ -147,16 +116,25 @@ export default {
 header {
   background-color: rgb(172, 172, 225);
   /*width: 90vw;*/
-  height: 70px;
-  display: flex;
-  justify-content: center;
-  margin: 20px;
+margin-top: 110px;
+
   border-radius: 15px;
 }
 #div1 {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+}
+h1 {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  vertical-align: middle;
+  font-variant: small-caps;
+  letter-spacing: 3px;
+  text-shadow: 3px 2px 3px rgb(118, 118, 175);
 }
 h2 {
   text-align: center;
@@ -168,6 +146,8 @@ h2 {
   /*height: 600px;*/
   margin: 10px;
   border-radius: 20px;
+  box-shadow: 3px 3px 1px;
+  margin-bottom: 40px;
 }
 #sec2 {
   background-color: rgb(240, 240, 131);
@@ -176,6 +156,8 @@ h2 {
   /*height: 170px;*/
   margin: 10px;
   border-radius: 20px;
+  box-shadow: 3px 3px 1px;
+  margin-bottom: 40px;
 }
 #sec3 {
   background-color: rgb(122, 223, 122);
@@ -184,5 +166,16 @@ h2 {
   /*height: 170px;*/
   margin: 10px;
   border-radius: 20px;
+  box-shadow: 3px 3px 1px;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 1000px) {
+  header {
+
+margin-top: 70px;
+
+
+}
 }
 </style>
