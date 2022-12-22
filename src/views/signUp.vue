@@ -103,9 +103,13 @@ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   width: 300px;
   background-color: rgb(228, 235, 240);
   border-radius: 10px;
-  
 }
-
+#hole-email:hover {
+ 
+  width: 340px;
+  transition: 0.5s;
+  background-color: antiquewhite;
+}
 .password-line {
   margin-bottom: 30px;
 }
@@ -119,6 +123,12 @@ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   width: 300px;
   background-color: rgb(228, 235, 240);
   border-radius: 10px;
+}
+#hole-password:hover {
+ 
+ width: 340px;
+ transition: 0.5s;
+ background-color: antiquewhite;
 }
 
 .create-account {
@@ -186,6 +196,12 @@ body {
   width: 240px;
   border-radius: 10px;
 }
+#hole-email:hover {
+ 
+ width: 270px;
+ transition: 0.5s;
+
+}
 
 .password-line {
   margin-bottom: 15px;
@@ -200,6 +216,12 @@ body {
   padding-top: 8px;
   width: 240px;
   border-radius: 10px;
+}
+#hole-password:hover {
+ 
+ width: 270px;
+ transition: 0.5s;
+
 }
 
 .create-account {

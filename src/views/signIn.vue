@@ -114,6 +114,12 @@ h1 {
   background-color: rgb(228, 235, 240);
   border-radius: 10px;
 }
+#hole-email:hover {
+ 
+  width: 340px;
+  transition: 0.5s;
+  background-color: antiquewhite;
+}
 
 .password-line {
   margin-bottom: 30px;
@@ -128,6 +134,12 @@ h1 {
   width: 300px;
   background-color: rgb(228, 235, 240);
   border-radius: 10px;
+}
+#hole-password:hover {
+ 
+ width: 340px;
+ transition: 0.5s;
+ background-color: antiquewhite;
 }
 
 .create-account {
@@ -183,28 +195,40 @@ transition: 0.5s;
   }
 
   #hole-email {
-    margin-top: 8px;
-    border: none;
-    padding-left: 12px;
-    padding-bottom: 8px;
-    padding-top: 8px;
-    width: 240px;
-    border-radius: 10px;
-  }
+  margin-top: 8px;
+  border: none;
+  padding-left: 12px;
+  padding-bottom: 8px;
+  padding-top: 8px;
+  width: 240px;
+  border-radius: 10px;
+}
+#hole-email:hover {
+ 
+ width: 270px;
+ transition: 0.5s;
+
+}
 
   .password-line {
     margin-bottom: 15px;
     font-size: 10px;
   }
   #hole-password {
-    margin-top: 8px;
-    border: none;
-    padding-left: 12px;
-    padding-bottom: 8px;
-    padding-top: 8px;
-    width: 240px;
-    border-radius: 10px;
-  }
+  margin-top: 8px;
+  border: none;
+  padding-left: 12px;
+  padding-bottom: 8px;
+  padding-top: 8px;
+  width: 240px;
+  border-radius: 10px;
+}
+#hole-password:hover {
+ 
+ width: 270px;
+ transition: 0.5s;
+
+}
 
   .create-account {
     margin-top: 12px;
