@@ -1,37 +1,41 @@
 <template>
   <nav>
-    <div class="nav1">
-      <button
-        class="btn-music"
-        @click.prevent="audio.isPlaying ? pause(audio) : play(audio)"
-        v-for="audio in audios"
-        :key="audio.id"
-      >
-        {{ audio.isPlaying ? "Pause" : "Play" }} {{ audio.name }}
-      </button>
+    <div class="emoji-and-logo">
+      <div>
+        <button
+          class="btn-music"
+          @click.prevent="audio.isPlaying ? pause(audio) : play(audio)"
+          v-for="audio in audios"
+          :key="audio.id"
+        >
+          {{ audio.isPlaying ? "Pause" : "Play" }} {{ audio.name }}
+        </button>
+      </div>
 
-      <li
-        class="nav-item"
-        @mouseover="homeLink = !homelink"
-        @mouseleave="homeLink = false"
-      >
-        <img
-          v-if="homeLink"
-          class="logo-emoji"
-          src="/src/images/logo-christmas.png"
-          alt="logo"
-        />
-        <img
-          v-else
-          class="logo-emoji"
-          src="/src/images/campanaIzquierda.png"
-          alt="logo2"
-        />
-      </li>
-    </div>
+      <div>
+        <li
+          class="nav-item"
+          @mouseover="homeLink = !homelink"
+          @mouseleave="homeLink = false"
+        >
+          <img
+            v-if="homeLink"
+            class="logo-emoji"
+            src="/src/images/logo-christmas.png"
+            alt="logo"
+          />
+          <img
+            v-else
+            class="logo-emoji"
+            src="/src/images/campanaIzquierda.png"
+            alt="logo2"
+          />
+        </li>
+      </div>
 
-    <div>
-      <img class="logo-img-main" src="/src/images/logo1.png" alt="logo" />
+      <div>
+        <img class="logo-img-main" src="/src/images/logo1.png" alt="logo" />
+      </div>
     </div>
 
     <div class="buttons">
@@ -83,8 +87,7 @@ export default {
 <style scoped>
 nav {
   height: 100px;
-  margin: 0px;
-  padding: 0px 0px 0px 0px;
+  margin-right: 8px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -98,14 +101,8 @@ nav {
 .nav-item {
   list-style: none;
 }
-
-.nav1 {
-  display: flex;
-  flex-direction: row;
-  padding: 0px 0px 0px 20px;
-}
 .btn-music {
-  margin: 4px 0px 4px 0px;
+  margin: 4px 0px 4px 4px;
   background-color: rgb(216, 66, 6);
   color: white;
   padding: 5px 10px 5px 10px;
@@ -120,17 +117,24 @@ nav {
   font-weight: bold;
   border-radius: 8px;
 }
+
+.emoji-and-logo {
+  display: flex;
+  align-items: center;
+  margin-left: 40px;
+}
 .logo-emoji {
   width: 100px;
   margin-left: 20px;
 }
 .logo-img-main {
-  height: 80px;
+  width: 200px;
+  margin-left: 200px;
 }
 .buttons {
   display: flex;
   flex-direction: row;
-  padding: 0px 20px 0px 0px;
+  margin-right: 30px;
 }
 .button1 button {
   margin: 8px;
@@ -147,6 +151,7 @@ nav {
   width: 140px;
   padding: 7px;
   font-size: 13px;
+
   border-radius: 12px;
   transition: 0.5s;
 }
@@ -165,14 +170,15 @@ nav {
   width: 140px;
   padding: 7px;
   font-size: 13px;
+
   border-radius: 12px;
   transition: 0.5s;
 }
 
 .button3 button {
-  margin: 8px 0px 8px 8px;
+  margin: 8px;
   width: 70px;
-  padding: 5px 0px 5px 5px;
+  padding: 5px;
   font-size: 11px;
   font-weight: bolder;
   border-radius: 10px;
@@ -184,6 +190,7 @@ nav {
   width: 90px;
   padding: 7px;
   font-size: 13px;
+
   border-radius: 12px;
   transition: 0.5s;
 }
@@ -194,26 +201,19 @@ nav {
     align-items: center;
     margin-right: 10px;
   }
-
-  .nav1 {
-    padding: 0px 0px 0px 5px;
-  }
-
-  .btn-music {
-    font-size: 10px;
-  }
   .emoji-and-logo {
     margin-left: 20px;
+
   }
   .logo-emoji {
-    margin-left: 0px;
+    margin-left: 5px;
     width: 60px;
-    margin-top: 0px;
+    margin-top: 5px;
   }
   .logo-img-main {
     margin-left: 0px;
     margin-right: 0px;
-    height: 40px;
+    width: 125px;
   }
   .button1 button {
     margin: 0px 2px;
@@ -225,7 +225,7 @@ nav {
   }
   .button1 button:hover {
     margin: 0px 9px;
-    width: 71px;
+    width: 73px;
     padding: 6px;
     font-size: 10px;
     border-radius: 4px;
@@ -241,7 +241,7 @@ nav {
   }
   .button2 button:hover {
     margin: 0px 9px;
-    width: 81px;
+    width: 90px;
     padding: 6px;
     font-size: 10px;
     border-radius: 4px;
@@ -258,14 +258,14 @@ nav {
   }
   .button3 button:hover {
     margin: 0px 9px;
-    width: 45px;
+    width: 60px;
     padding: 6px;
     font-size: 10px;
     border-radius: 4px;
     transition: 0.5s;
   }
   .buttons {
-    margin-bottom: 0px;
+    margin-bottom: 8px;
   }
 }
 </style>

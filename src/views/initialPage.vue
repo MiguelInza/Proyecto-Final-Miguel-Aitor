@@ -1,6 +1,5 @@
 <template>
   <body>
-    <div class="container"></div>
     <div>
       <img
         class="logo-initial-page"
@@ -37,8 +36,6 @@ body {
   height: 77vh;
   background-color: rgb(161, 152, 231);
   border-radius: 30px;
-
-
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -91,19 +88,20 @@ h2 {
     margin-bottom: 50px;
   }
   .logo-initial-page {
-    width: 250px;
+    width: 400px;
   }
 
   h1 {
     width: 200px;
-    font-size: 25px;
+    font-size: 30px;
     padding-left: 100px;
     padding-right: 100px;
+    margin: 0px;
   }
   
   h2 {
     width: 200px;
-    font-size: 18px;
+    font-size: 22px;
     padding-left: 100px;
     padding-right: 100px;
   }
