@@ -102,6 +102,7 @@ nav {
 .nav1 {
   display: flex;
   flex-direction: row;
+  align-items: center;
   padding: 0px 0px 0px 20px;
 }
 .btn-music {
@@ -112,6 +113,7 @@ nav {
   border-radius: 14px;
   font-size: 12px;
   cursor: pointer;
+  height: 30px;
 }
 .btn-music:hover {
   background-color: white;
@@ -201,6 +203,7 @@ nav {
 
   .btn-music {
     font-size: 10px;
+    height: 50px;
   }
   .emoji-and-logo {
     margin-left: 20px;
