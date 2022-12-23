@@ -2,7 +2,6 @@ import { createRouter, createWebHistory } from "vue-router";
 import Dashboard from "../views/Dashboard.vue";
 import signUp from "../views/signUp.vue";
 import signIn from "../views/signIn.vue";
-import signOut from "../views/signOut.vue";
 import initialPage from "../views/initialPage.vue";
 
 const router = createRouter({
@@ -24,10 +23,7 @@ const router = createRouter({
       path: "/signIn",
       component: signIn
     },
-    {
-      path: "/signOut",
-      component: signOut
-    },
+
   ],
 });
 

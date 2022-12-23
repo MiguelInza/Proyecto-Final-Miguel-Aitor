@@ -46,12 +46,15 @@ footer {
   font-family: "Trebuchet MS", Verdana, sans-serif;
   font-weight: bold;
 }
-
 .logo {
   width: 22px;
   height: 22px;
   float: left;
   transition: all 0.5s ease;
+}
+.logo:hover {
+  width: 32px;
+  height: 32px;
 }
 
 #logos-redes {
@@ -67,11 +70,11 @@ footer {
     font-size: 14px;
   }
 }
+
 @media (max-width: 700px) {
   footer {
     height: 35px;
   }
-
   .logo-principal {
     width: 90px;
     margin-bottom: 2px;

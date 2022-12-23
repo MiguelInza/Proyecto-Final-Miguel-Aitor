@@ -1,6 +1,5 @@
 <template>
   <body>
-    <div class="container"></div>
     <div>
       <img
         class="logo-initial-page"
@@ -32,14 +31,11 @@ export default {
 </script>
 
 <style scoped>
-
-
 body {
   margin-top: 110px;
+  height: 77vh;
   background-color: rgb(161, 152, 231);
   border-radius: 30px;
-
-  height: 510px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -52,30 +48,29 @@ body {
 h1 {
   width: 440px;
   font-size: 38px;
-  
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  
   padding-left: 50px;
   padding-right: 50px;
 }
+
 h2 {
   width: 400px;
   font-size: 26px;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-
 }
 
 @media (max-width: 1180px) {
   .logo-initial-page {
     width: 360px;
   }
+
   h1 {
     width: 440px;
     font-size: 34px;
-
     padding-left: 50px;
     padding-right: 50px;
   }
+
   h2 {
     width: 400px;
     font-size: 23px;
@@ -84,25 +79,29 @@ h2 {
 
 @media (max-width: 1000px) {
   body {
-    height: 550px;
+    height: 82vh;
     margin-top: 70px;
+    margin-bottom: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 50px;
   }
   .logo-initial-page {
-    width: 250px;
+    width: 400px;
   }
+
   h1 {
     width: 200px;
-    font-size: 25px;
-
+    font-size: 30px;
     padding-left: 100px;
     padding-right: 100px;
+    margin: 0px;
   }
+  
   h2 {
     width: 200px;
-    font-size: 18px;
+    font-size: 22px;
     padding-left: 100px;
     padding-right: 100px;
   }
