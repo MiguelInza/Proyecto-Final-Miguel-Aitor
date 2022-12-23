@@ -203,8 +203,13 @@ nav {
 
   .btn-music {
     font-size: 10px;
-    height: 50px;
+    height: 47px;
   }
+  .btn-music:hover {
+
+  font-weight: bold;
+  border-radius: 8px;
+}
   .emoji-and-logo {
     margin-left: 20px;
   }
@@ -216,7 +221,7 @@ nav {
   .logo-img-main {
     margin-left: 0px;
     margin-right: 0px;
-    height: 40px;
+    height: 35px;
   }
   .button1 button {
     margin: 0px 2px;
